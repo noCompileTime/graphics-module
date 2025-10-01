@@ -21,5 +21,8 @@ namespace opengl
     auto Functions::init_buffer_functions() -> void
     {
         functions::create_buffers = reinterpret_cast<functions::PFNGLCREATEBUFFERS>(wglGetProcAddress("glCreateBuffers"));
+        functions::delete_buffers = reinterpret_cast<functions::PFNGLDELETEBUFFERS>(wglGetProcAddress("glDeleteBuffers"));
+
+        functions::buffer_storage = reinterpret_cast<functions::PFNGLBUFFERSTORAGEPROC>(wglGetProcAddress("glNamedBufferStorage"));
     }
 }
