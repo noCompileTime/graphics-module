@@ -8,9 +8,9 @@ namespace core::buffer
         const void*  ptr  { };
     };
 
-    template <typename type>
-    static auto make_data(const std::vector<type>& vector) -> data
+    template <typename type> requires std::is_class_v<type>
+    static auto make_data(const std::vector<type>& elements) -> data
     {
-        return { vector.size() * sizeof(type), vector.data() };
+        return { elements.size() * sizeof(type), elements.data() };
     }
 }
