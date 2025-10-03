@@ -30,10 +30,9 @@ namespace opengl
 
     auto Functions::init_vertex_array_functions() -> void
     {
-        functions::bind_vertex_array            = reinterpret_cast<functions::PFNGLBINDVERTEXARRAYPROC>   (wglGetProcAddress("glBindVertexArray"));
-
         functions::create_vertex_arrays         = reinterpret_cast<functions::PFNGLCREATEVERTEXARRAYSPROC>(wglGetProcAddress("glCreateVertexArrays"));
         functions::delete_vertex_arrays         = reinterpret_cast<functions::PFNGLDELETEVERTEXARRAYSPROC>(wglGetProcAddress("glDeleteVertexArrays"));
+        functions::bind_vertex_array            = reinterpret_cast<functions::PFNGLBINDVERTEXARRAYPROC>   (wglGetProcAddress("glBindVertexArray"));
 
         functions::vertex_array_vertices_buffer = reinterpret_cast<functions::PFNGLVERTEXARRAYVERTEXBUFFERPROC>  (wglGetProcAddress("glVertexArrayVertexBuffer"));
         functions::vertex_array_elements_buffer = reinterpret_cast<functions::PFNGLVERTEXARRAYELEMENTBUFFERPROC> (wglGetProcAddress("glVertexArrayElementBuffer"));
