@@ -13,10 +13,17 @@ namespace opengl
 
     auto Functions::init_core_functions() -> void
     {
-        if (const auto instance    = LoadLibrary("opengl32.dll"))
+        if (const auto instance = LoadLibrary("opengl32.dll"))
         {
-            functions::clear       = reinterpret_cast<functions::PFNGLCLEARPROC> (GetProcAddress(instance, "glClear"));
-            functions::clear_color = reinterpret_cast<functions::PFNGLCLEARCOLOR>(GetProcAddress(instance, "glClearColor"));
+            functions::clear         = reinterpret_cast<functions::PFNGLCLEARPROC>     (GetProcAddress(instance, "glClear"));
+            functions::clear_color   = reinterpret_cast<functions::PFNGLCLEARCOLORPROC>(GetProcAddress(instance, "glClearColor"));
+
+            functions::draw_arrays   = reinterpret_cast<functions::PFNGLDRAWARRAYSPROC>   (GetProcAddress(instance, "glDrawArrays"));
+            functions::draw_elements = reinterpret_cast<functions::PFNGLDRAWELEMENTSPROC> (GetProcAddress(instance, "glDrawElements"));
+
+            functions::viewport      = reinterpret_cast<functions::PFNGLVIEWPORTPROC>(GetProcAddress(instance, "glViewport"));
+
+            FreeLibrary(instance);
         }
     }
 
