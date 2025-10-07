@@ -9,4 +9,5 @@ namespace opengl::constants
     constexpr auto  uint32_type = 0x1405;
 
     constexpr auto    triangles = 0x0004;
+    constexpr auto        lines = 0x0001;
 }
