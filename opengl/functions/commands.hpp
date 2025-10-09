@@ -17,6 +17,5 @@ namespace opengl::functions
 
     inline PFNGLDRAWARRAYSPROC   draw_arrays;
     inline PFNGLDRAWELEMENTSPROC draw_elements;
-
-    inline PFNGLVIEWPORTPROC     viewport;
+    inline PFNGLVIEWPORTPROC          viewport;
 }

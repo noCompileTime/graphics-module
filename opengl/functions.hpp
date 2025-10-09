@@ -11,6 +11,7 @@ namespace opengl
         static auto init_core_functions()         -> void;
 
         static auto init_buffer_functions()       -> void;
+        static auto init_shader_functions()       -> void;
 
         static auto init_vertex_array_functions() -> void;
     };
