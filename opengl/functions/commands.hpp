@@ -4,8 +4,8 @@
 
 namespace opengl::functions
 {
-    using  PFNGLCLEARPROC        = auto(APIENTRY*)(GLbitfield mask)                                         -> void;
-    using  PFNGLCLEARCOLORPROC   = auto(APIENTRY*)(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha) -> void;
+    using  PFNGLCLEARPROC        = auto(APIENTRY*)(GLbitfield mask)                                 -> void;
+    using  PFNGLCLEARCOLORPROC   = auto(APIENTRY*)(float red, float green, float blue, float alpha) -> void;
 
     using  PFNGLDRAWARRAYSPROC   = auto(APIENTRY*)(GLenum mode, GLint first, GLsizei count)                      -> void;
     using  PFNGLDRAWELEMENTSPROC = auto(APIENTRY*)(GLenum mode, GLsizei count, GLenum type, const void* indices) -> void;

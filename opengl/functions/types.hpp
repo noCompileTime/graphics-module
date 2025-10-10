@@ -2,8 +2,6 @@
 
 namespace opengl::functions
 {
-    using GLfloat    = float;
-
     using GLbitfield = uint32_t;
     using GLuint     = uint32_t;
     using GLenum     = uint32_t;
