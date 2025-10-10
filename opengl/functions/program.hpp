@@ -14,8 +14,8 @@ namespace opengl::functions
     inline PFNGLCREATEPROGRAMPROC create_program;
     inline PFNGLDELETEPROGRAMPROC delete_program;
 
-    inline PFNGLUSEPROGRAMPROC    bind_program;
-    inline PFNGLLINKPROGRAMPROC   link_program;
+    inline PFNGLUSEPROGRAMPROC      bind_program;
+    inline PFNGLLINKPROGRAMPROC     link_program;
 
     inline PFNGLATTACHSHADERPROC  attach_shader;
     inline PFNGLDETACHSHADERPROC  detach_shader;
