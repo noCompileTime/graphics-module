@@ -7,12 +7,17 @@ namespace opengl
     public:
         static auto init() -> void;
 
+               Functions()  = delete;
+
     private:
-        static auto init_core_functions()         -> void;
+        static auto  common_functions() -> void;
 
-        static auto init_buffer_functions()       -> void;
-        static auto init_shader_functions()       -> void;
+        static auto  shader_functions() -> void;
+        static auto program_functions() -> void;
 
-        static auto init_vertex_array_functions() -> void;
+        static auto  buffer_functions() -> void;
+        static auto texture_functions() -> void;
+
+        static auto  vertex_array_functions() -> void;
     };
 }
