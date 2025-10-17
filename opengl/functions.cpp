@@ -59,6 +59,7 @@ namespace opengl
         functions::bind_buffer_base = reinterpret_cast<functions::PFNGLBINDBUFFERBASEPROC>(wglGetProcAddress("glBindBufferBase"));
 
         functions::buffer_storage   = reinterpret_cast<functions::PFNGLBUFFERSTORAGEPROC> (wglGetProcAddress("glNamedBufferStorage"));
+        functions::buffer_update    = reinterpret_cast<functions::PFNGLBUFFERSUBDATAPROC> (wglGetProcAddress("glNamedBufferSubData"));
     }
 
     auto Functions::texture_functions() -> void
