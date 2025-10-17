@@ -53,10 +53,12 @@ namespace opengl
 
     auto Functions::buffer_functions() -> void
     {
-        functions::create_buffers = reinterpret_cast<functions::PFNGLCREATEBUFFERS>(wglGetProcAddress("glCreateBuffers"));
-        functions::delete_buffers = reinterpret_cast<functions::PFNGLDELETEBUFFERS>(wglGetProcAddress("glDeleteBuffers"));
+        functions::create_buffers   = reinterpret_cast<functions::PFNGLCREATEBUFFERS>(wglGetProcAddress("glCreateBuffers"));
+        functions::delete_buffers   = reinterpret_cast<functions::PFNGLDELETEBUFFERS>(wglGetProcAddress("glDeleteBuffers"));
 
-        functions::buffer_storage = reinterpret_cast<functions::PFNGLBUFFERSTORAGEPROC>(wglGetProcAddress("glNamedBufferStorage"));
+        functions::bind_buffer_base = reinterpret_cast<functions::PFNGLBINDBUFFERBASEPROC>(wglGetProcAddress("glBindBufferBase"));
+
+        functions::buffer_storage   = reinterpret_cast<functions::PFNGLBUFFERSTORAGEPROC> (wglGetProcAddress("glNamedBufferStorage"));
     }
 
     auto Functions::texture_functions() -> void
