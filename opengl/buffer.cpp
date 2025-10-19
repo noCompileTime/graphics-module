@@ -17,9 +17,9 @@ namespace opengl
         functions::bind_buffer_base(target, location, _handle);
     }
 
-    auto Buffer::storage(const core::buffer::data& data, const uint32_t flags) const -> void
+    auto Buffer::storage(const core::buffer::data& data, const uint32_t usage) const -> void
     {
-        functions::buffer_storage(_handle, data.size, data.ptr, flags);
+        functions::buffer_storage(_handle, data.size, data.ptr, usage);
     }
 
     auto Buffer::update(const core::buffer::data& data, const uint32_t offset) const -> void
