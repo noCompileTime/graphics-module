@@ -15,4 +15,12 @@ namespace core::buffer
     {
         return { elements.size() * sizeof(type), elements.data() };
     }
+
+    template <typename type>
+              requires std::is_class_v<type>
+    static auto  make_data(const type* ptr) -> data
+    {
+                        assert(ptr != nullptr);
+        return { sizeof(type), ptr };
+    }
 }
