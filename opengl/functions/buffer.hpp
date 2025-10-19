@@ -4,8 +4,8 @@
 
 namespace opengl::functions
 {
-    using  PFNGLCREATEBUFFERS      = auto(APIENTRY*)(GLsizei n,       GLuint* buffers)           ->  void;
-    using  PFNGLDELETEBUFFERS      = auto(APIENTRY*)(GLsizei n, const GLuint* buffers)           ->  void;
+    using  PFNGLCREATEBUFFERS      = auto(APIENTRY*)(GLsizei n,       GLuint* buffers)           -> void;
+    using  PFNGLDELETEBUFFERS      = auto(APIENTRY*)(GLsizei n, const GLuint* buffers)           -> void;
 
     using  PFNGLBINDBUFFERBASEPROC = auto(APIENTRY*)(GLenum target, GLuint index, GLuint buffer) -> void;
 
