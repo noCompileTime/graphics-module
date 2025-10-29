@@ -9,4 +9,5 @@
 #include "functions/commands.hpp"
 #include "functions/program.hpp"
 #include "functions/shader.hpp"
+#include "functions/texture.hpp"
 #include "functions/vertex_array.hpp"

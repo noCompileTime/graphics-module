@@ -64,6 +64,8 @@ namespace opengl
 
     auto Functions::texture_functions() -> void
     {
+        functions::create_textures  = reinterpret_cast<functions::PFNGLCREATETEXTURESPROC>(wglGetProcAddress("glCreateTextures"));
+        functions::delete_textures  = reinterpret_cast<functions::PFNGLDELETETEXTURESPROC>(wglGetProcAddress("glDeleteTextures"));
     }
 
     auto Functions::vertex_array_functions() -> void
