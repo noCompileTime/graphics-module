@@ -1,6 +1,6 @@
 #include "functions.hpp"
-#include "functions/program.hpp"
 #include "functions/shader.hpp"
+#include "functions/shader_stage.hpp"
 #include "functions/texture.hpp"
 
 namespace opengl
@@ -9,8 +9,8 @@ namespace opengl
     {
          common_functions();
 
+  shader_stages_functions();
          shader_functions();
-        program_functions();
 
          buffer_functions();
         texture_functions();
@@ -42,7 +42,7 @@ namespace opengl
         functions::shader_binary     = reinterpret_cast<functions::PFNGLSHADERBINARYPROC>    (wglGetProcAddress("glShaderBinary"));
     }
 
-    auto Functions::program_functions() -> void
+    auto Functions::shader_stages_functions() -> void
     {
         functions::create_program = reinterpret_cast<functions::PFNGLCREATEPROGRAMPROC>(wglGetProcAddress("glCreateProgram"));
         functions::delete_program = reinterpret_cast<functions::PFNGLDELETEPROGRAMPROC>(wglGetProcAddress("glDeleteProgram"));

@@ -2,15 +2,21 @@
 
 namespace opengl::functions
 {
-    using  PFNGLCREATESHADERPROC     = auto(APIENTRY*)(uint32_t type)   -> uint32_t;
-    using  PFNGLDELETESHADERPROC     = auto(APIENTRY*)(uint32_t shader) -> void;
+    using  PFNGLCREATEPROGRAMPROC = auto(APIENTRY*)()               -> uint32_t;
+    using  PFNGLDELETEPROGRAMPROC = auto(APIENTRY*)(GLuint program) -> void;
 
-    using  PFNGLSHADERBINARYPROC     = auto(APIENTRY*)(GLsizei count, const GLuint* shaders,   GLenum format,    const void* binary, GLsizei length)                         -> void;
-    using  PFNGLSPECIALIZESHADERPROC = auto(APIENTRY*)(GLuint shader, const char* entry_point, GLuint constants, const GLuint* constant_index, const GLuint* constant_value) -> void;
+    using  PFNGLUSEPROGRAMPROC    = auto(APIENTRY*)(GLuint program) -> void;
+    using  PFNGLLINKPROGRAMPROC   = auto(APIENTRY*)(GLuint program) -> void;
 
-    inline PFNGLCREATESHADERPROC     create_shader;
-    inline PFNGLDELETESHADERPROC     delete_shader;
+    using  PFNGLATTACHSHADERPROC  = auto(APIENTRY*)(GLuint program, GLuint shader) -> void;
+    using  PFNGLDETACHSHADERPROC  = auto(APIENTRY*)(GLuint program, GLuint shader) -> void;
 
-    inline PFNGLSPECIALIZESHADERPROC shader_specialize;
-    inline PFNGLSHADERBINARYPROC     shader_binary;
+    inline PFNGLCREATEPROGRAMPROC create_program;
+    inline PFNGLDELETEPROGRAMPROC delete_program;
+
+    inline PFNGLATTACHSHADERPROC   attach_shader;
+    inline PFNGLDETACHSHADERPROC   detach_shader;
+
+    inline PFNGLUSEPROGRAMPROC      bind_program;
+    inline PFNGLLINKPROGRAMPROC     link_program;
 }
