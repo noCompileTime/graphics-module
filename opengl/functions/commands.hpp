@@ -4,7 +4,7 @@
 
 namespace opengl::functions
 {
-    using  PFNGLCLEARPROC        = auto(APIENTRY*)(GLbitfield mask)                                 -> void;
+    using  PFNGLCLEARPROC        = auto(APIENTRY*)(uint32_t mask)                                   -> void;
     using  PFNGLCLEARCOLORPROC   = auto(APIENTRY*)(float red, float green, float blue, float alpha) -> void;
 
     using  PFNGLDRAWARRAYSPROC   = auto(APIENTRY*)(GLenum mode, GLint first, GLsizei count)                      -> void;
