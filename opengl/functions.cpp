@@ -1,4 +1,7 @@
 #include "functions.hpp"
+#include "functions/program.hpp"
+#include "functions/shader.hpp"
+#include "functions/texture.hpp"
 
 namespace opengl
 {

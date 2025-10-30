@@ -1,4 +1,5 @@
-#include "shader_stage.hpp"
+#include           "shader_stage.hpp"
+#include "functions/shader.hpp"
 
 namespace opengl
 {
