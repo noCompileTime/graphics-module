@@ -10,8 +10,8 @@ namespace opengl
         auto  create()  -> void override;
         auto destroy()  -> void override;
 
-        auto  source(const std::vector<char>& source) const -> void;
+        auto source(const std::vector<char>& source) const -> void;
 
-        auto    type(uint32_t type) -> void;
+        auto   type(uint32_t type) -> void;
     };
 }
