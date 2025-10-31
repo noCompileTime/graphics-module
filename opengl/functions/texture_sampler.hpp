@@ -12,5 +12,6 @@ namespace opengl::functions
     inline PFNGLDELETESAMPLERSPROC    delete_samplers;
 
     inline PFNGLSAMPLERPARAMETERIPROC sampler_parameteri;
-    inline PFNGLBINDSAMPLERPROC          bind_sampler;
+
+    inline PFNGLBINDSAMPLERPROC       bind_sampler;
 }

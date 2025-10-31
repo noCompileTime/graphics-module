@@ -2,20 +2,22 @@
 #include "functions/shader.hpp"
 #include "functions/shader_stage.hpp"
 #include "functions/texture.hpp"
+#include "functions/texture_sampler.hpp"
 
 namespace opengl
 {
     auto Functions::init() -> void
     {
-         common_functions();
+              common_functions();
 
-  shader_stages_functions();
-         shader_functions();
+       shader_stages_functions();
+              shader_functions();
 
-         buffer_functions();
-        texture_functions();
+              buffer_functions();
+     texture_sampler_functions();
+             texture_functions();
 
-         vertex_array_functions();
+        vertex_array_functions();
     }
 
     auto Functions::common_functions() -> void
@@ -67,8 +69,23 @@ namespace opengl
 
     auto Functions::texture_functions() -> void
     {
-        functions::create_textures  = reinterpret_cast<functions::PFNGLCREATETEXTURESPROC>(wglGetProcAddress("glCreateTextures"));
-        functions::delete_textures  = reinterpret_cast<functions::PFNGLDELETETEXTURESPROC>(wglGetProcAddress("glDeleteTextures"));
+        functions::create_textures   = reinterpret_cast<functions::PFNGLCREATETEXTURESPROC>(wglGetProcAddress("glCreateTextures"));
+        functions::delete_textures   = reinterpret_cast<functions::PFNGLDELETETEXTURESPROC>(wglGetProcAddress("glDeleteTextures"));
+
+        functions::texture_storage2d = reinterpret_cast<functions::PFNGLTEXTURESTORAGE2DPROC> (wglGetProcAddress("glTextureStorage2D"));
+        functions::texture_update2d  = reinterpret_cast<functions::PFNGLTEXTURESUBIMAGE2DPROC>(wglGetProcAddress("glTextureSubImage2D"));
+
+        functions::bind_texture_unit = reinterpret_cast<functions::PFNGLBINDTEXTUREUNITPROC>(wglGetProcAddress("glBindTextureUnit"));
+    }
+
+    auto Functions::texture_sampler_functions() -> void
+    {
+        functions::create_samplers    = reinterpret_cast<functions::PFNGLCREATESAMPLERSPROC>(wglGetProcAddress("glCreateSamplers"));
+        functions::delete_samplers    = reinterpret_cast<functions::PFNGLDELETESAMPLERSPROC>(wglGetProcAddress("glDeleteSamplers"));
+
+        functions::sampler_parameteri = reinterpret_cast<functions::PFNGLSAMPLERPARAMETERIPROC>(wglGetProcAddress("glSamplerParameteri"));
+
+        functions::bind_sampler       = reinterpret_cast<functions::PFNGLBINDSAMPLERPROC>(wglGetProcAddress("glBindSampler"));
     }
 
     auto Functions::vertex_array_functions() -> void

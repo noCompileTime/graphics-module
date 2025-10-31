@@ -10,14 +10,15 @@ namespace opengl
                Functions()  = delete;
 
     private:
-        static auto        common_functions() -> void;
+        static auto          common_functions() -> void;
 
-        static auto        shader_functions() -> void;
-        static auto shader_stages_functions() -> void;
+        static auto          shader_functions() -> void;
+        static auto   shader_stages_functions() -> void;
 
-        static auto        buffer_functions() -> void;
-        static auto       texture_functions() -> void;
+        static auto          buffer_functions() -> void;
+        static auto         texture_functions() -> void;
+        static auto texture_sampler_functions() -> void;
 
-        static auto  vertex_array_functions() -> void;
+        static auto    vertex_array_functions() -> void;
     };
 }
