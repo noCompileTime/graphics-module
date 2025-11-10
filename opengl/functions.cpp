@@ -1,8 +1,4 @@
 #include "functions.hpp"
-#include "functions/shader.hpp"
-#include "functions/shader_stage.hpp"
-#include "functions/texture.hpp"
-#include "functions/texture_sampler.hpp"
 
 namespace opengl
 {
