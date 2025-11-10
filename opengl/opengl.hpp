@@ -7,4 +7,5 @@
 
 #include "functions/buffer.hpp"
 #include "functions/commands.hpp"
+#include "functions/shader_stage.hpp"
 #include "functions/vertex_array.hpp"

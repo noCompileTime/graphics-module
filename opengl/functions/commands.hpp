@@ -7,8 +7,8 @@ namespace opengl::functions
     using  PFNGLCLEARPROC        = auto(APIENTRY*)(uint32_t mask)                                   -> void;
     using  PFNGLCLEARCOLORPROC   = auto(APIENTRY*)(float red, float green, float blue, float alpha) -> void;
 
-    using  PFNGLDRAWARRAYSPROC   = auto(APIENTRY*)(GLenum mode, GLint first, GLsizei count)                      -> void;
-    using  PFNGLDRAWELEMENTSPROC = auto(APIENTRY*)(GLenum mode, GLsizei count, GLenum type, const void* indices) -> void;
+    using  PFNGLDRAWARRAYSPROC   = auto(APIENTRY*)(GLenum mode, GLint   first, GLsizei count)                     -> void;
+    using  PFNGLDRAWELEMENTSPROC = auto(APIENTRY*)(GLenum mode, GLsizei count, GLenum  type, const void* indices) -> void;
 
     using  PFNGLVIEWPORTPROC     = auto(APIENTRY*)(GLint x, GLint y, GLsizei width, GLsizei height) -> void;
 
