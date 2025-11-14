@@ -4,8 +4,8 @@ namespace core::buffer
 {
     enum location
     {
-        transform,
         camera,
+        transform,
 
         material
     };
