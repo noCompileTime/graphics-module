@@ -13,7 +13,7 @@ namespace opengl
         auto storage(uint32_t width, uint32_t height, uint32_t format, int32_t levels)                  const -> void;
         auto  update(uint32_t width, uint32_t height, uint32_t format, int32_t level, const void* data) const -> void;
 
-        auto bind(uint32_t location) const -> void;
-        auto type(uint32_t type)           -> void;
+        auto    bind(uint32_t location) const -> void;
+        auto    type(uint32_t type)           -> void;
     };
 }
