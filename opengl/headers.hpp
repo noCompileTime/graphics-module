@@ -5,6 +5,7 @@
 #include "constants/buffer.hpp"
 #include "constants/commands.hpp"
 #include "constants/shader_stage.hpp"
+#include "constants/texture.hpp"
 
 #include "functions/buffer.hpp"
 #include "functions/commands.hpp"
