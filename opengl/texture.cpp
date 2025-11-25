@@ -18,7 +18,7 @@ namespace opengl
         functions::texture_storage2d(_handle, levels, format, width, height);
     }
 
-    auto Texture::update(const uint32_t width, const uint32_t height, const uint32_t format, const int32_t level, const void* data) const -> void
+    auto Texture::upload(const uint32_t width, const uint32_t height, const uint32_t format, const int32_t level, const void* data) const -> void
     {
         functions::texture_update2d(_handle, level, 0, 0, width, height, format, constants::uint8_type, data);
     }

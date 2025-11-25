@@ -22,7 +22,7 @@ namespace opengl
         functions::buffer_storage(_handle, data.size, data.ptr, usage);
     }
 
-    auto Buffer::update(const core::buffer::data& data, const uint32_t offset) const -> void
+    auto Buffer::upload(const core::buffer::data& data, const uint32_t offset) const -> void
     {
         functions::buffer_update(_handle, offset, data.size, data.ptr);
     }

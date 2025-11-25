@@ -13,6 +13,6 @@ namespace opengl
         auto bind_base(uint32_t target, uint32_t location)              const -> void;
 
         auto   storage(const core::buffer::data& data, uint32_t  usage) const -> void;
-        auto    update(const core::buffer::data& data, uint32_t offset) const -> void;
+        auto    upload(const core::buffer::data& data, uint32_t offset) const -> void;
     };
 }
