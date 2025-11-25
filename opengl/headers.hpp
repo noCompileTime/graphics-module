@@ -2,6 +2,8 @@
 
 #include <windows.h>
 
+#include "constants/common.hpp"
+
 #include "constants/buffer.hpp"
 #include "constants/commands.hpp"
 #include "constants/shader_stage.hpp"
