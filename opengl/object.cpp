@@ -2,6 +2,11 @@
 
 namespace opengl
 {
+    Object::Object(const uint32_t info)
+        : _info { info }
+    {
+    }
+
     auto Object::handle() const -> uint32_t
     {
         return _handle;

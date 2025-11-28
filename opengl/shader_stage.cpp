@@ -2,9 +2,13 @@
 
 namespace opengl
 {
+    ShaderStage::ShaderStage(const uint32_t info)
+        : Object { info }
+    {
+    }
+
     auto ShaderStage::create() -> void
     {
-                                    assert(_info != 0);
         _handle = functions::create_shader(_info);
     }
 
@@ -17,10 +21,5 @@ namespace opengl
     {
         functions::shader_binary(1, &_handle, constants::binary_format,  source.data(), source.size());
         functions::shader_specialize(_handle, "main", 0, nullptr, nullptr);
-    }
-
-    auto ShaderStage::type(const uint32_t type) -> void
-    {
-        _info = type;
     }
 }

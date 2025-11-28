@@ -5,10 +5,13 @@ namespace opengl
     class Object
     {
     public:
+                Object() = default;
+       virtual ~Object() = default;
+
+       explicit Object(uint32_t info);
+
         virtual auto  create() -> void = 0;
         virtual auto destroy() -> void = 0;
-
-        virtual   ~Object()  = default;
 
         auto handle() const -> uint32_t;
         auto   info() const -> uint32_t;
