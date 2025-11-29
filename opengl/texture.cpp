@@ -2,10 +2,14 @@
 
 namespace opengl
 {
+    Texture::Texture(const uint32_t info)
+        : Object { info }
+    {
+    }
+
     auto Texture::create() -> void
     {
-                            assert(_info != 0);
-        functions::create_textures(_info,   1, &_handle);
+        functions::create_textures(_info, 1, &_handle);
     }
 
     auto Texture::destroy() -> void
@@ -26,10 +30,5 @@ namespace opengl
     auto Texture::bind(const uint32_t location) const -> void
     {
         functions::bind_texture_unit(location, _handle);
-    }
-
-    auto Texture::type(const uint32_t type) -> void
-    {
-        _info = type;
     }
 }
