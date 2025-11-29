@@ -7,6 +7,7 @@ namespace opengl
     class Texture final : public Object
     {
     public:
+
     explicit Texture(uint32_t info);
 
         auto  create() -> void override;
