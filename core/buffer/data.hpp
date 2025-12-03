@@ -4,19 +4,19 @@ namespace core::buffer
 {
     struct data
     {
-        const size_t size { };
         const void*  ptr  { };
+        const size_t size { };
     };
 
     template <typename type>
-              requires std::is_class_v<type> ||
-                       std::is_integral_v<type>
+              requires std::is_class_v     <type> ||
+                       std::is_integral_v  <type>
     static auto make_data(const std::vector<type>& elements) -> data
     {
         return
         {
+            elements.data(),
             elements.size() * sizeof(type),
-            elements.data()
         };
     }
 
@@ -27,8 +27,8 @@ namespace core::buffer
         assert(ptr != nullptr);
         return
         {
-            sizeof(type),
-            ptr
+            ptr,
+            sizeof(type)
         };
     }
 }
