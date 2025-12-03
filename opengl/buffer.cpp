@@ -9,7 +9,7 @@ namespace opengl
 
     auto Buffer::destroy() -> void
     {
-        functions::delete_buffers(1, &_handle);
+        functions::glDeleteBuffers(1, &_handle);
     }
 
     auto Buffer::storage(const core::buffer::data& data, const uint32_t usage) const -> void
