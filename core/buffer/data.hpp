@@ -31,4 +31,15 @@ namespace core::buffer
             sizeof(type)
         };
     }
+
+    template <typename type>
+              requires std::is_class_v<type>
+    static auto make_null_data() -> data
+    {
+        return
+        {
+            nullptr,
+            sizeof(type)
+        };
+    }
 }
