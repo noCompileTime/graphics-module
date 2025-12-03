@@ -4,7 +4,7 @@ namespace opengl
 {
     auto Buffer::create() -> void
     {
-        functions::create_buffers(1, &_handle);
+        functions::glCreateBuffers(1, &_handle);
     }
 
     auto Buffer::destroy() -> void

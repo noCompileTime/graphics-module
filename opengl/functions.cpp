@@ -54,8 +54,8 @@ namespace opengl
 
     auto Functions::buffer_functions() -> void
     {
-        functions::create_buffers   = reinterpret_cast<functions::PFNGLCREATEBUFFERS>(wglGetProcAddress("glCreateBuffers"));
-        functions::delete_buffers   = reinterpret_cast<functions::PFNGLDELETEBUFFERS>(wglGetProcAddress("glDeleteBuffers"));
+        functions::glCreateBuffers  = reinterpret_cast<functions::PFNGLCREATEBUFFERSPROC>(wglGetProcAddress("glCreateBuffers"));
+        functions::glDeleteBuffers  = reinterpret_cast<functions::PFNGLDELETEBUFFERSPROC>(wglGetProcAddress("glDeleteBuffers"));
 
         functions::bind_buffer_base = reinterpret_cast<functions::PFNGLBINDBUFFERBASEPROC>(wglGetProcAddress("glBindBufferBase"));
 

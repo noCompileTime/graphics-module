@@ -19,7 +19,7 @@ namespace opengl
 
     auto ShaderStage::source(const std::vector<char>& source) const -> void
     {
-        functions::shader_binary(1, &_handle, constants::binary_format,  source.data(), source.size());
+        functions::shader_binary(1, &_handle, constants::spirv_binary_format, source.data(), source.size());
         functions::shader_specialize(_handle, "main", 0, nullptr, nullptr);
     }
 }
