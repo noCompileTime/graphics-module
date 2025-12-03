@@ -5,9 +5,9 @@ namespace opengl
     class Functions
     {
     public:
-        static auto init() -> void;
+        Functions() = delete;
 
-               Functions()  = delete;
+        static auto init() -> void;
 
     private:
         static auto          common_functions() -> void;

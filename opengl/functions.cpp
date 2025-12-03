@@ -54,13 +54,15 @@ namespace opengl
 
     auto Functions::buffer_functions() -> void
     {
-        functions::glCreateBuffers  = reinterpret_cast<functions::PFNGLCREATEBUFFERSPROC>(wglGetProcAddress("glCreateBuffers"));
-        functions::glDeleteBuffers  = reinterpret_cast<functions::PFNGLDELETEBUFFERSPROC>(wglGetProcAddress("glDeleteBuffers"));
+        functions::glCreateBuffers   = reinterpret_cast<functions::PFNGLCREATEBUFFERSPROC>(wglGetProcAddress("glCreateBuffers"));
+        functions::glDeleteBuffers   = reinterpret_cast<functions::PFNGLDELETEBUFFERSPROC>(wglGetProcAddress("glDeleteBuffers"));
 
-        functions::bind_buffer_base = reinterpret_cast<functions::PFNGLBINDBUFFERBASEPROC>(wglGetProcAddress("glBindBufferBase"));
+        functions::glBindBuffer      = reinterpret_cast<functions::PFNGLBINDBUFFERPROC>     (wglGetProcAddress("glBindBuffer"));
+        functions::glBindBufferBase  = reinterpret_cast<functions::PFNGLBINDBUFFERBASEPROC> (wglGetProcAddress("glBindBufferBase"));
+        functions::glBindBufferRange = reinterpret_cast<functions::PFNGLBINDBUFFERRANGEPROC>(wglGetProcAddress("glBindBufferRange"));
 
-        functions::buffer_storage   = reinterpret_cast<functions::PFNGLBUFFERSTORAGEPROC> (wglGetProcAddress("glNamedBufferStorage"));
-        functions::buffer_update    = reinterpret_cast<functions::PFNGLBUFFERSUBDATAPROC> (wglGetProcAddress("glNamedBufferSubData"));
+        functions::glBufferStorage   = reinterpret_cast<functions::PFNGLBUFFERSTORAGEPROC>(wglGetProcAddress("glNamedBufferStorage"));
+        functions::glBufferSubData   = reinterpret_cast<functions::PFNGLBUFFERSUBDATAPROC>(wglGetProcAddress("glNamedBufferSubData"));
     }
 
     auto Functions::texture_functions() -> void
