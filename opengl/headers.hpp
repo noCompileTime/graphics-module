@@ -8,6 +8,7 @@
 #include "constants/commands.hpp"
 #include "constants/shader.hpp"
 #include "constants/texture.hpp"
+#include "constants/texture_sampler.hpp"
 
 #include "functions/buffer.hpp"
 #include "functions/commands.hpp"
