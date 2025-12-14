@@ -27,6 +27,8 @@ namespace opengl
             functions::draw_elements = reinterpret_cast<functions::PFNGLDRAWELEMENTSPROC>(GetProcAddress(instance, "glDrawElements"));
             functions::     viewport = reinterpret_cast<functions::PFNGLVIEWPORTPROC>    (GetProcAddress(instance, "glViewport"));
 
+            functions::glEnable      = reinterpret_cast<functions::PFNGLENABLEPROC>(GetProcAddress(instance, "glEnable"));
+
             FreeLibrary(instance);
         }
     }
