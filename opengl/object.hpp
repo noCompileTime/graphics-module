@@ -13,8 +13,8 @@ namespace opengl
         virtual auto  create() -> void = 0;
         virtual auto destroy() -> void = 0;
 
-        auto    handle() const -> uint32_t;
-        auto      info() const -> uint32_t;
+        [[nodiscard]] auto handle() const -> uint32_t;
+        [[nodiscard]] auto   info() const -> uint32_t;
 
     protected:
         uint32_t _handle { };
