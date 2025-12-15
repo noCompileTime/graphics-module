@@ -2,10 +2,9 @@
 
 #include <windows.h>
 
-#include "constants/common.hpp"
-
 #include "constants/buffer.hpp"
 #include "constants/commands.hpp"
+#include "constants/common.hpp"
 #include "constants/pipeline.hpp"
 #include "constants/shader.hpp"
 #include "constants/texture.hpp"
