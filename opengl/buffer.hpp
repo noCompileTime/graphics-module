@@ -10,9 +10,9 @@ namespace opengl
         auto  create() ->  void override;
         auto destroy() ->  void override;
 
-        auto storage(const core::buffer::data& data, uint32_t  usage) const -> void;
-        auto  upload(const core::buffer::data& data, uint32_t offset) const -> void;
+        auto storage(const core::buffer::data& data, uint32_t  usage) const noexcept -> void;
+        auto  upload(const core::buffer::data& data, uint32_t offset) const noexcept -> void;
 
-        auto    bind(uint32_t target, uint32_t location)              const -> void;
+        auto    bind(uint32_t target, uint32_t location)              const noexcept -> void;
     };
 }
