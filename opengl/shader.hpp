@@ -13,7 +13,7 @@ namespace opengl
         auto  attach(const ShaderStage& stage) const -> void;
         auto  detach(const ShaderStage& stage) const -> void;
 
-        auto  link() const -> void;
         auto  bind() const -> void;
+        auto  link() const -> void;
     };
 }
