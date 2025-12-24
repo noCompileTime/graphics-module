@@ -1,17 +1,17 @@
 #pragma once
 
-namespace core::buffer
+namespace core::data
 {
-    struct data
+    struct buffer
     {
         const void*  ptr  { };
         const size_t size { };
     };
 
     template <typename type>
-              requires std::is_class_v     <type> ||
-                       std::is_integral_v  <type>
-    static auto make_data(const std::vector<type>& elements) noexcept -> data
+              requires std::is_class_v       <type> ||
+                       std::is_integral_v    <type>
+    static auto make_buffer(const std::vector<type>& elements) noexcept -> buffer
     {
         return
         {
@@ -22,7 +22,7 @@ namespace core::buffer
 
     template <typename type>
               requires std::is_class_v<type>
-    static auto make_data(const type*  ptr) noexcept -> data
+    static auto make_buffer(const type* ptr) noexcept -> buffer
     {
         assert(ptr != nullptr);
         return
@@ -34,7 +34,7 @@ namespace core::buffer
 
     template <typename type>
               requires std::is_class_v<type>
-    static auto make_null_data() noexcept -> data
+    static auto make_null_buffer() noexcept -> buffer
     {
         return
         {

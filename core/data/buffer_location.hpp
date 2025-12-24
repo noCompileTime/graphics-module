@@ -1,8 +1,8 @@
 #pragma once
 
-namespace core::buffer
+namespace core::data
 {
-    enum location
+    enum class buffer_location : uint32_t
     {
         camera,
         transform,
