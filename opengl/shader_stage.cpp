@@ -9,17 +9,17 @@ namespace opengl
 
     auto ShaderStage::create() -> void
     {
-        _handle = functions::create_shader(_info);
+        _handle = functions::glCreateShader(_info);
     }
 
     auto ShaderStage::destroy() -> void
     {
-        functions::delete_shader(_handle);
+        functions::glDeleteShader(_handle);
     }
 
     auto ShaderStage::source(const std::vector<char>& source) const -> void
     {
-        functions::shader_binary(1, &_handle, constants::spirv_binary_format, source.data(), source.size());
-        functions::shader_specialize(_handle, "main", 0, nullptr, nullptr);
+        functions::glShaderBinary(1, &_handle, constants::spirv_binary_format, source.data(), source.size());
+        functions::glSpecializeShader(_handle, "main", 0, nullptr, nullptr);
     }
 }
