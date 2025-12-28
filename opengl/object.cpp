@@ -7,12 +7,12 @@ namespace opengl
     {
     }
 
-    auto Object::handle() const -> uint32_t
+    auto Object::handle() const noexcept -> uint32_t
     {
         return _handle;
     }
 
-    auto Object::info() const -> uint32_t
+    auto Object::info() const noexcept -> uint32_t
     {
         return _info;
     }
