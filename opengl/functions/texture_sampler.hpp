@@ -1,5 +1,7 @@
 #pragma once
 
+#include "types.hpp"
+
 namespace opengl::functions
 {
     using  PFNGLCREATESAMPLERSPROC    = auto(APIENTRY*)(GLsizei n,           GLuint* samplers)     -> void;

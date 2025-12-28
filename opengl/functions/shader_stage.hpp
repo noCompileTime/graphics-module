@@ -1,5 +1,7 @@
 #pragma once
 
+#include "types.hpp"
+
 namespace opengl::functions
 {
     using  PFNGLCREATESHADERPROC     = auto(APIENTRY*)(uint32_t type)   -> uint32_t;

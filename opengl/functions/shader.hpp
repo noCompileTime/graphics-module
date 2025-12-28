@@ -2,21 +2,21 @@
 
 namespace opengl::functions
 {
-    using  PFNGLCREATEPROGRAMPROC = auto(APIENTRY*)()               -> uint32_t;
-    using  PFNGLDELETEPROGRAMPROC = auto(APIENTRY*)(GLuint program) -> void;
+    using  PFNGLCREATEPROGRAMPROC = auto(APIENTRY*)()                 -> uint32_t;
+    using  PFNGLDELETEPROGRAMPROC = auto(APIENTRY*)(uint32_t program) -> void;
 
-    using  PFNGLUSEPROGRAMPROC    = auto(APIENTRY*)(GLuint program) -> void;
-    using  PFNGLLINKPROGRAMPROC   = auto(APIENTRY*)(GLuint program) -> void;
+    using  PFNGLUSEPROGRAMPROC    = auto(APIENTRY*)(uint32_t program) -> void;
+    using  PFNGLLINKPROGRAMPROC   = auto(APIENTRY*)(uint32_t program) -> void;
 
-    using  PFNGLATTACHSHADERPROC  = auto(APIENTRY*)(GLuint program, GLuint shader) -> void;
-    using  PFNGLDETACHSHADERPROC  = auto(APIENTRY*)(GLuint program, GLuint shader) -> void;
+    using  PFNGLATTACHSHADERPROC  = auto(APIENTRY*)(uint32_t program, uint32_t shader) -> void;
+    using  PFNGLDETACHSHADERPROC  = auto(APIENTRY*)(uint32_t program, uint32_t shader) -> void;
 
-    inline PFNGLCREATEPROGRAMPROC create_program;
-    inline PFNGLDELETEPROGRAMPROC delete_program;
+    inline PFNGLCREATEPROGRAMPROC glCreateProgram;
+    inline PFNGLDELETEPROGRAMPROC glDeleteProgram;
 
-    inline PFNGLATTACHSHADERPROC   attach_shader;
-    inline PFNGLDETACHSHADERPROC   detach_shader;
+    inline PFNGLATTACHSHADERPROC  glAttachShader;
+    inline PFNGLDETACHSHADERPROC  glDetachShader;
 
-    inline PFNGLUSEPROGRAMPROC      bind_program;
-    inline PFNGLLINKPROGRAMPROC     link_program;
+    inline PFNGLUSEPROGRAMPROC    glUseProgram;
+    inline PFNGLLINKPROGRAMPROC   glLinkProgram;
 }

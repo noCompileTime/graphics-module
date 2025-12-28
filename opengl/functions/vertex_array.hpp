@@ -1,5 +1,7 @@
 #pragma once
 
+#include "types.hpp"
+
 namespace opengl::functions
 {
     using  PFNGLCREATEVERTEXARRAYSPROC       = auto(APIENTRY*)(GLsizei n,       GLuint* arrays) -> void;

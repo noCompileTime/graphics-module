@@ -20,14 +20,15 @@ namespace opengl
     {
         if (const auto instance = LoadLibrary("opengl32.dll"))
         {
-            functions::clear         = reinterpret_cast<functions::PFNGLCLEARPROC>       (GetProcAddress(instance, "glClear"));
-            functions::clear_color   = reinterpret_cast<functions::PFNGLCLEARCOLORPROC>  (GetProcAddress(instance, "glClearColor"));
+            functions::glClear        = reinterpret_cast<functions::PFNGLCLEARPROC>       (GetProcAddress(instance, "glClear"));
+            functions::glClearColor   = reinterpret_cast<functions::PFNGLCLEARCOLORPROC>  (GetProcAddress(instance, "glClearColor"));
 
-            functions::draw_arrays   = reinterpret_cast<functions::PFNGLDRAWARRAYSPROC>  (GetProcAddress(instance, "glDrawArrays"));
-            functions::draw_elements = reinterpret_cast<functions::PFNGLDRAWELEMENTSPROC>(GetProcAddress(instance, "glDrawElements"));
-            functions::     viewport = reinterpret_cast<functions::PFNGLVIEWPORTPROC>    (GetProcAddress(instance, "glViewport"));
+            functions::glDrawArrays   = reinterpret_cast<functions::PFNGLDRAWARRAYSPROC>  (GetProcAddress(instance, "glDrawArrays"));
+            functions::glDrawElements = reinterpret_cast<functions::PFNGLDRAWELEMENTSPROC>(GetProcAddress(instance, "glDrawElements"));
 
-            functions::glEnable      = reinterpret_cast<functions::PFNGLENABLEPROC>(GetProcAddress(instance, "glEnable"));
+            functions::glViewport     = reinterpret_cast<functions::PFNGLVIEWPORTPROC>    (GetProcAddress(instance, "glViewport"));
+
+            functions::glEnable       = reinterpret_cast<functions::PFNGLENABLEPROC>(GetProcAddress(instance, "glEnable"));
 
             FreeLibrary(instance);
         }
@@ -44,14 +45,14 @@ namespace opengl
 
     auto Functions::shader_stages_functions() -> void
     {
-        functions::create_program = reinterpret_cast<functions::PFNGLCREATEPROGRAMPROC>(wglGetProcAddress("glCreateProgram"));
-        functions::delete_program = reinterpret_cast<functions::PFNGLDELETEPROGRAMPROC>(wglGetProcAddress("glDeleteProgram"));
+        functions::glCreateProgram = reinterpret_cast<functions::PFNGLCREATEPROGRAMPROC>(wglGetProcAddress("glCreateProgram"));
+        functions::glDeleteProgram = reinterpret_cast<functions::PFNGLDELETEPROGRAMPROC>(wglGetProcAddress("glDeleteProgram"));
 
-        functions::bind_program   = reinterpret_cast<functions::PFNGLUSEPROGRAMPROC>   (wglGetProcAddress("glUseProgram"));
-        functions::link_program   = reinterpret_cast<functions::PFNGLLINKPROGRAMPROC>  (wglGetProcAddress("glLinkProgram"));
+        functions::glUseProgram    = reinterpret_cast<functions::PFNGLUSEPROGRAMPROC>   (wglGetProcAddress("glUseProgram"));
+        functions::glLinkProgram   = reinterpret_cast<functions::PFNGLLINKPROGRAMPROC>  (wglGetProcAddress("glLinkProgram"));
 
-        functions::attach_shader  = reinterpret_cast<functions::PFNGLATTACHSHADERPROC> (wglGetProcAddress("glAttachShader"));
-        functions::detach_shader  = reinterpret_cast<functions::PFNGLDETACHSHADERPROC> (wglGetProcAddress("glDetachShader"));
+        functions::glAttachShader  = reinterpret_cast<functions::PFNGLATTACHSHADERPROC> (wglGetProcAddress("glAttachShader"));
+        functions::glDetachShader  = reinterpret_cast<functions::PFNGLDETACHSHADERPROC> (wglGetProcAddress("glDetachShader"));
     }
 
     auto Functions::buffer_functions() -> void

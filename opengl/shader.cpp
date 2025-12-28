@@ -4,31 +4,31 @@ namespace opengl
 {
     auto Shader::create() -> void
     {
-        _handle = functions::create_program();
+        _handle = functions::glCreateProgram();
     }
 
     auto Shader::destroy() -> void
     {
-        functions::delete_program(_handle);
+        functions::glDeleteProgram(_handle);
     }
 
     auto Shader::attach(const ShaderStage& stage) const -> void
     {
-        functions::attach_shader(_handle, stage.handle());
+        functions::glAttachShader(_handle, stage.handle());
     }
 
     auto Shader::detach(const ShaderStage& stage) const -> void
     {
-        functions::detach_shader(_handle, stage.handle());
+        functions::glDetachShader(_handle, stage.handle());
     }
 
     auto Shader::bind() const -> void
     {
-        functions::bind_program(_handle);
+        functions::glUseProgram(_handle);
     }
 
     auto Shader::link() const -> void
     {
-        functions::link_program(_handle);
+        functions::glLinkProgram(_handle);
     }
 }

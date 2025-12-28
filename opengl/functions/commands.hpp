@@ -1,21 +1,20 @@
 #pragma once
 
-#include "types.hpp"
-
 namespace opengl::functions
 {
     using  PFNGLCLEARPROC        = auto(APIENTRY*)(uint32_t mask)                                   -> void;
     using  PFNGLCLEARCOLORPROC   = auto(APIENTRY*)(float red, float green, float blue, float alpha) -> void;
 
-    using  PFNGLDRAWARRAYSPROC   = auto(APIENTRY*)(GLenum mode, GLint   first, GLsizei count)                     -> void;
-    using  PFNGLDRAWELEMENTSPROC = auto(APIENTRY*)(GLenum mode, GLsizei count, GLenum  type, const void* indices) -> void;
+    using  PFNGLDRAWARRAYSPROC   = auto(APIENTRY*)(uint32_t mode, int32_t first, int32_t count)                      -> void;
+    using  PFNGLDRAWELEMENTSPROC = auto(APIENTRY*)(uint32_t mode, int32_t count, uint32_t type, const void* indices) -> void;
 
-    using  PFNGLVIEWPORTPROC     = auto(APIENTRY*)(GLint x, GLint y, GLsizei width, GLsizei height) -> void;
+    using  PFNGLVIEWPORTPROC     = auto(APIENTRY*)(int32_t x, int32_t y, int32_t width, int32_t height) -> void;
 
-    inline PFNGLCLEARPROC        clear;
-    inline PFNGLCLEARCOLORPROC   clear_color;
+    inline PFNGLCLEARPROC        glClear;
+    inline PFNGLCLEARCOLORPROC   glClearColor;
 
-    inline PFNGLDRAWARRAYSPROC   draw_arrays;
-    inline PFNGLDRAWELEMENTSPROC draw_elements;
-    inline PFNGLVIEWPORTPROC          viewport;
+    inline PFNGLDRAWARRAYSPROC   glDrawArrays;
+    inline PFNGLDRAWELEMENTSPROC glDrawElements;
+
+    inline PFNGLVIEWPORTPROC     glViewport;
 }
