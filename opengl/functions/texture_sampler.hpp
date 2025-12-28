@@ -1,19 +1,17 @@
 #pragma once
 
-#include "types.hpp"
-
 namespace opengl::functions
 {
-    using  PFNGLCREATESAMPLERSPROC    = auto(APIENTRY*)(GLsizei n,           GLuint* samplers)     -> void;
-    using  PFNGLDELETESAMPLERSPROC    = auto(APIENTRY*)(GLsizei count, const GLuint* samplers)     -> void;
+    using  PFNGLCREATESAMPLERSPROC    = auto(APIENTRY*)(int32_t n,           uint32_t* samplers) -> void;
+    using  PFNGLDELETESAMPLERSPROC    = auto(APIENTRY*)(int32_t count, const uint32_t* samplers) -> void;
 
-    using  PFNGLSAMPLERPARAMETERIPROC = auto(APIENTRY*)(GLuint sampler, GLenum pname, GLint param) -> void;
-    using  PFNGLBINDSAMPLERPROC       = auto(APIENTRY*)(GLuint unit,    GLuint sampler)            -> void;
+    using  PFNGLSAMPLERPARAMETERIPROC = auto(APIENTRY*)(uint32_t sampler, uint32_t pname, int32_t param) -> void;
+    using  PFNGLBINDSAMPLERPROC       = auto(APIENTRY*)(uint32_t unit,    uint32_t sampler)              -> void;
 
-    inline PFNGLCREATESAMPLERSPROC    create_samplers;
-    inline PFNGLDELETESAMPLERSPROC    delete_samplers;
+    inline PFNGLCREATESAMPLERSPROC    glCreateSamplers;
+    inline PFNGLDELETESAMPLERSPROC    glDeleteSamplers;
 
-    inline PFNGLSAMPLERPARAMETERIPROC sampler_parameteri;
+    inline PFNGLSAMPLERPARAMETERIPROC glSamplerParameteri;
 
-    inline PFNGLBINDSAMPLERPROC       bind_sampler;
+    inline PFNGLBINDSAMPLERPROC       glBindSampler;
 }
