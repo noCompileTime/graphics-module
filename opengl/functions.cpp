@@ -70,13 +70,13 @@ namespace opengl
 
     auto Functions::texture_functions() -> void
     {
-        functions::create_textures   = reinterpret_cast<functions::PFNGLCREATETEXTURESPROC>(wglGetProcAddress("glCreateTextures"));
-        functions::delete_textures   = reinterpret_cast<functions::PFNGLDELETETEXTURESPROC>(wglGetProcAddress("glDeleteTextures"));
+        functions::glCreateTextures    = reinterpret_cast<functions::PFNGLCREATETEXTURESPROC>(wglGetProcAddress("glCreateTextures"));
+        functions::glDeleteTextures    = reinterpret_cast<functions::PFNGLDELETETEXTURESPROC>(wglGetProcAddress("glDeleteTextures"));
 
-        functions::texture_storage2d = reinterpret_cast<functions::PFNGLTEXTURESTORAGE2DPROC> (wglGetProcAddress("glTextureStorage2D"));
-        functions::texture_update2d  = reinterpret_cast<functions::PFNGLTEXTURESUBIMAGE2DPROC>(wglGetProcAddress("glTextureSubImage2D"));
+        functions::glTextureStorage2D  = reinterpret_cast<functions::PFNGLTEXTURESTORAGE2DPROC> (wglGetProcAddress("glTextureStorage2D"));
+        functions::glTextureSubImage2D = reinterpret_cast<functions::PFNGLTEXTURESUBIMAGE2DPROC>(wglGetProcAddress("glTextureSubImage2D"));
 
-        functions::bind_texture_unit = reinterpret_cast<functions::PFNGLBINDTEXTUREUNITPROC>(wglGetProcAddress("glBindTextureUnit"));
+        functions::glBindTextureUnit   = reinterpret_cast<functions::PFNGLBINDTEXTUREUNITPROC>(wglGetProcAddress("glBindTextureUnit"));
     }
 
     auto Functions::texture_sampler_functions() -> void
