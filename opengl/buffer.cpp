@@ -2,12 +2,12 @@
 
 namespace opengl
 {
-    auto Buffer::create() -> void
+    auto Buffer::create() noexcept -> void
     {
         functions::glCreateBuffers(1, &_handle);
     }
 
-    auto Buffer::destroy() -> void
+    auto Buffer::destroy() noexcept -> void
     {
         functions::glDeleteBuffers(1, &_handle);
     }

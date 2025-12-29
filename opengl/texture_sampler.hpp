@@ -7,8 +7,8 @@ namespace opengl
     class TextureSampler final : public Object
     {
     public:
-        auto    create() -> void override;
-        auto   destroy() -> void override;
+        auto    create() noexcept -> void override;
+        auto   destroy() noexcept -> void override;
 
         auto parameter(uint32_t param, int32_t value) const -> void;
 

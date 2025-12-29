@@ -2,12 +2,12 @@
 
 namespace opengl
 {
-    auto VertexArray::create() -> void
+    auto VertexArray::create() noexcept -> void
     {
         functions::glCreateVertexArrays(1, &_handle);
     }
 
-    auto VertexArray::destroy() -> void
+    auto VertexArray::destroy() noexcept -> void
     {
         functions::glDeleteVertexArrays(1, &_handle);
     }

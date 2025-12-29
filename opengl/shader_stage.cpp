@@ -7,12 +7,12 @@ namespace opengl
     {
     }
 
-    auto ShaderStage::create() -> void
+    auto ShaderStage::create() noexcept -> void
     {
         _handle = functions::glCreateShader(_info);
     }
 
-    auto ShaderStage::destroy() -> void
+    auto ShaderStage::destroy() noexcept -> void
     {
         functions::glDeleteShader(_handle);
     }

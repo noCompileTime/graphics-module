@@ -7,8 +7,8 @@ namespace opengl
     class VertexArray final : public Object
     {
     public:
-        auto  create() -> void override;
-        auto destroy() -> void override;
+        auto  create() noexcept -> void override;
+        auto destroy() noexcept -> void override;
 
         auto attach_vertices (const Buffer& buffer, int32_t stride)     const -> void;
         auto attach_elements (const Buffer& buffer)                     const -> void;

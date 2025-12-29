@@ -7,8 +7,8 @@ namespace opengl
     class Shader final : public Object
     {
     public:
-        auto  create() ->  void override;
-        auto destroy() ->  void override;
+        auto  create() noexcept -> void override;
+        auto destroy() noexcept -> void override;
 
         auto  attach(const ShaderStage& stage) const -> void;
         auto  detach(const ShaderStage& stage) const -> void;

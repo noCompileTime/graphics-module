@@ -7,8 +7,8 @@ namespace opengl
     class Buffer final : public Object
     {
     public:
-        auto  create() ->  void override;
-        auto destroy() ->  void override;
+        auto  create() noexcept -> void override;
+        auto destroy() noexcept -> void override;
 
         auto storage(const core::data::buffer& data, uint32_t  usage) const noexcept -> void;
         auto  upload(const core::data::buffer& data, uint32_t offset) const noexcept -> void;

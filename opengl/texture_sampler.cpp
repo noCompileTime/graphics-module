@@ -2,12 +2,12 @@
 
 namespace opengl
 {
-    auto TextureSampler::create() -> void
+    auto TextureSampler::create() noexcept -> void
     {
         functions::glCreateSamplers(1, &_handle);
     }
 
-    auto TextureSampler::destroy() -> void
+    auto TextureSampler::destroy() noexcept -> void
     {
         functions::glDeleteSamplers(1, &_handle);
     }

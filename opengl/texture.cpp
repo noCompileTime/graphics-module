@@ -7,12 +7,12 @@ namespace opengl
     {
     }
 
-    auto Texture::create() -> void
+    auto Texture::create() noexcept -> void
     {
         functions::glCreateTextures(_info, 1, &_handle);
     }
 
-    auto Texture::destroy() -> void
+    auto Texture::destroy() noexcept -> void
     {
         functions::glDeleteTextures(1, &_handle);
     }
