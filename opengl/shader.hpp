@@ -10,10 +10,10 @@ namespace opengl
         auto  create() noexcept -> void override;
         auto destroy() noexcept -> void override;
 
-        auto  attach(const ShaderStage& stage) const noexcept -> void;
-        auto  detach(const ShaderStage& stage) const noexcept -> void;
+        auto attach(const ShaderStage& stage) const noexcept -> void;
+        auto detach(const ShaderStage& stage) const noexcept -> void;
 
-        auto  bind() const noexcept -> void;
-        auto  link() const noexcept -> void;
+        auto bind() const noexcept -> void;
+        auto link() const noexcept -> void;
     };
 }

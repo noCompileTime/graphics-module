@@ -20,6 +20,8 @@ namespace opengl
     {
         if (const auto instance = LoadLibrary("opengl32.dll"))
         {
+            /* commands */
+
             functions::glClear        = reinterpret_cast<functions::PFNGLCLEARPROC>       (GetProcAddress(instance, "glClear"));
             functions::glClearColor   = reinterpret_cast<functions::PFNGLCLEARCOLORPROC>  (GetProcAddress(instance, "glClearColor"));
 
@@ -27,6 +29,8 @@ namespace opengl
             functions::glDrawElements = reinterpret_cast<functions::PFNGLDRAWELEMENTSPROC>(GetProcAddress(instance, "glDrawElements"));
 
             functions::glViewport     = reinterpret_cast<functions::PFNGLVIEWPORTPROC>    (GetProcAddress(instance, "glViewport"));
+
+            /* pipeline */
 
             functions::glEnable       = reinterpret_cast<functions::PFNGLENABLEPROC> (GetProcAddress(instance, "glEnable"));
             functions::glDisable      = reinterpret_cast<functions::PFNGLDISABLEPROC>(GetProcAddress(instance, "glDisable"));

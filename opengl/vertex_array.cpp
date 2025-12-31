@@ -22,7 +22,7 @@ namespace opengl
         functions::glVertexArrayElementBuffer(_handle, buffer.handle());
     }
 
-    auto VertexArray::attach_attribute(const core::vertex::attribute& attribute) const -> void
+    auto VertexArray::attach(const core::vertex::attribute& attribute) const -> void
     {
         functions::glVertexArrayAttribFormat (_handle, attribute.index, attribute.size, attribute.type, 0, attribute.offset);
         functions::glVertexArrayAttribBinding(_handle, attribute.index, 0);
