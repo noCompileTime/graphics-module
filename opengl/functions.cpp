@@ -28,7 +28,8 @@ namespace opengl
 
             functions::glViewport     = reinterpret_cast<functions::PFNGLVIEWPORTPROC>    (GetProcAddress(instance, "glViewport"));
 
-            functions::glEnable       = reinterpret_cast<functions::PFNGLENABLEPROC>(GetProcAddress(instance, "glEnable"));
+            functions::glEnable       = reinterpret_cast<functions::PFNGLENABLEPROC> (GetProcAddress(instance, "glEnable"));
+            functions::glDisable      = reinterpret_cast<functions::PFNGLDISABLEPROC>(GetProcAddress(instance, "glDisable"));
 
             FreeLibrary(instance);
         }
