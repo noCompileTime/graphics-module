@@ -2,7 +2,7 @@
 
 namespace opengl
 {
-    auto Functions::init() -> void
+    auto Functions::init() noexcept -> void
     {
               common_functions();
 
@@ -16,7 +16,7 @@ namespace opengl
         vertex_array_functions();
     }
 
-    auto Functions::common_functions() -> void
+    auto Functions::common_functions() noexcept -> void
     {
         if (const auto instance = LoadLibrary("opengl32.dll"))
         {
@@ -35,7 +35,7 @@ namespace opengl
         }
     }
 
-    auto Functions::shader_functions() -> void
+    auto Functions::shader_functions() noexcept -> void
     {
         functions::glCreateShader     = reinterpret_cast<functions::PFNGLCREATESHADERPROC>(wglGetProcAddress("glCreateShader"));
         functions::glDeleteShader     = reinterpret_cast<functions::PFNGLDELETESHADERPROC>(wglGetProcAddress("glDeleteShader"));
@@ -44,7 +44,7 @@ namespace opengl
         functions::glShaderBinary     = reinterpret_cast<functions::PFNGLSHADERBINARYPROC>    (wglGetProcAddress("glShaderBinary"));
     }
 
-    auto Functions::shader_stages_functions() -> void
+    auto Functions::shader_stages_functions() noexcept -> void
     {
         functions::glCreateProgram = reinterpret_cast<functions::PFNGLCREATEPROGRAMPROC>(wglGetProcAddress("glCreateProgram"));
         functions::glDeleteProgram = reinterpret_cast<functions::PFNGLDELETEPROGRAMPROC>(wglGetProcAddress("glDeleteProgram"));
@@ -56,7 +56,7 @@ namespace opengl
         functions::glDetachShader  = reinterpret_cast<functions::PFNGLDETACHSHADERPROC> (wglGetProcAddress("glDetachShader"));
     }
 
-    auto Functions::buffer_functions() -> void
+    auto Functions::buffer_functions() noexcept -> void
     {
         functions::glCreateBuffers   = reinterpret_cast<functions::PFNGLCREATEBUFFERSPROC>(wglGetProcAddress("glCreateBuffers"));
         functions::glDeleteBuffers   = reinterpret_cast<functions::PFNGLDELETEBUFFERSPROC>(wglGetProcAddress("glDeleteBuffers"));
@@ -69,7 +69,7 @@ namespace opengl
         functions::glBufferSubData   = reinterpret_cast<functions::PFNGLBUFFERSUBDATAPROC>(wglGetProcAddress("glNamedBufferSubData"));
     }
 
-    auto Functions::texture_functions() -> void
+    auto Functions::texture_functions() noexcept -> void
     {
         functions::glCreateTextures    = reinterpret_cast<functions::PFNGLCREATETEXTURESPROC>(wglGetProcAddress("glCreateTextures"));
         functions::glDeleteTextures    = reinterpret_cast<functions::PFNGLDELETETEXTURESPROC>(wglGetProcAddress("glDeleteTextures"));
@@ -80,7 +80,7 @@ namespace opengl
         functions::glBindTextureUnit   = reinterpret_cast<functions::PFNGLBINDTEXTUREUNITPROC>(wglGetProcAddress("glBindTextureUnit"));
     }
 
-    auto Functions::texture_sampler_functions() -> void
+    auto Functions::texture_sampler_functions() noexcept -> void
     {
         functions::glCreateSamplers    = reinterpret_cast<functions::PFNGLCREATESAMPLERSPROC>(wglGetProcAddress("glCreateSamplers"));
         functions::glDeleteSamplers    = reinterpret_cast<functions::PFNGLDELETESAMPLERSPROC>(wglGetProcAddress("glDeleteSamplers"));
@@ -90,7 +90,7 @@ namespace opengl
         functions::glBindSampler       = reinterpret_cast<functions::PFNGLBINDSAMPLERPROC>(wglGetProcAddress("glBindSampler"));
     }
 
-    auto Functions::vertex_array_functions() -> void
+    auto Functions::vertex_array_functions() noexcept -> void
     {
         functions::glCreateVertexArrays       = reinterpret_cast<functions::PFNGLCREATEVERTEXARRAYSPROC>(wglGetProcAddress("glCreateVertexArrays"));
         functions::glDeleteVertexArrays       = reinterpret_cast<functions::PFNGLDELETEVERTEXARRAYSPROC>(wglGetProcAddress("glDeleteVertexArrays"));
