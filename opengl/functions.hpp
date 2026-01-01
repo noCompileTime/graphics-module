@@ -16,6 +16,7 @@ namespace opengl
         static auto   shader_stages_functions() noexcept -> void;
 
         static auto          buffer_functions() noexcept -> void;
+        static auto     framebuffer_functions() noexcept -> void;
         static auto         texture_functions() noexcept -> void;
         static auto texture_sampler_functions() noexcept -> void;
 
