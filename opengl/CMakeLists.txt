@@ -1,6 +1,6 @@
 #=======================================================================================================================
     target_link_libraries(${PROJECT_NAME} PRIVATE opengl32)
 target_precompile_headers(${PROJECT_NAME} PRIVATE headers.hpp)
-           target_sources(${PROJECT_NAME} PRIVATE functions.cpp object.cpp buffer.cpp vertex_array.cpp commands.cpp
-                                                  shader.cpp shader_stage.cpp texture.cpp texture_sampler.cpp)
+           target_sources(${PROJECT_NAME} PRIVATE texture_sampler.cpp vertex_array.cpp shader_stage.cpp framebuffer.cpp
+                                                  texture.cpp pipeline.cpp commands.cpp shader.cpp buffer.cpp object.cpp)
 #=======================================================================================================================
