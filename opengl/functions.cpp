@@ -77,14 +77,15 @@ namespace opengl
 
     auto Functions::framebuffer_functions() noexcept -> void
     {
-        functions::glCreateFramebuffers     = reinterpret_cast<functions::PFNGLCREATEFRAMEBUFFERSPROC>(wglGetProcAddress("glCreateFramebuffers"));
-        functions::glDeleteFramebuffers     = reinterpret_cast<functions::PFNGLDELETEFRAMEBUFFERSPROC>(wglGetProcAddress("glDeleteFramebuffers"));
+        functions::glCreateFramebuffers      = reinterpret_cast<functions::PFNGLCREATEFRAMEBUFFERSPROC>(wglGetProcAddress("glCreateFramebuffers"));
+        functions::glDeleteFramebuffers      = reinterpret_cast<functions::PFNGLDELETEFRAMEBUFFERSPROC>(wglGetProcAddress("glDeleteFramebuffers"));
 
-        functions::glFramebufferTexture     = reinterpret_cast<functions::PFNGLFRAMEBUFFERTEXTUREPROC>(wglGetProcAddress("glNamedFramebufferTexture"));
+        functions::glFramebufferTexture      = reinterpret_cast<functions::PFNGLFRAMEBUFFERTEXTUREPROC>     (wglGetProcAddress("glNamedFramebufferTexture"));
+        functions::glFramebufferRenderbuffer = reinterpret_cast<functions::PFNGLFRAMEBUFFERRENDERBUFFERPROC>(wglGetProcAddress("glNamedFramebufferRenderbuffer"));
 
-        functions::glCheckFramebufferStatus = reinterpret_cast<functions::PFNGLCHECKFRAMEBUFFERSTATUSPROC>(wglGetProcAddress("glCheckNamedFramebufferStatus"));
+        functions::glCheckFramebufferStatus  = reinterpret_cast<functions::PFNGLCHECKFRAMEBUFFERSTATUSPROC>(wglGetProcAddress("glCheckNamedFramebufferStatus"));
 
-        functions::glBindFramebuffer        = reinterpret_cast<functions::PFNGLBINDFRAMEBUFFERPROC>(wglGetProcAddress("glBindFramebuffer"));
+        functions::glBindFramebuffer         = reinterpret_cast<functions::PFNGLBINDFRAMEBUFFERPROC>(wglGetProcAddress("glBindFramebuffer"));
     }
 
     auto Functions::renderbuffer_functions() noexcept -> void
