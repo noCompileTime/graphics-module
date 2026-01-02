@@ -11,6 +11,7 @@ namespace opengl
 
               buffer_functions();
          framebuffer_functions();
+        renderbuffer_functions();
              texture_functions();
      texture_sampler_functions();
 
@@ -84,6 +85,12 @@ namespace opengl
         functions::glCheckFramebufferStatus = reinterpret_cast<functions::PFNGLCHECKFRAMEBUFFERSTATUSPROC>(wglGetProcAddress("glCheckNamedFramebufferStatus"));
 
         functions::glBindFramebuffer        = reinterpret_cast<functions::PFNGLBINDFRAMEBUFFERPROC>(wglGetProcAddress("glBindFramebuffer"));
+    }
+
+    auto Functions::renderbuffer_functions() noexcept -> void
+    {
+        functions::glCreateRenderbuffers = reinterpret_cast<functions::PFNGLCREATERENDERBUFFERSPROC>(wglGetProcAddress("glCreateRenderbuffers"));
+        functions::glDeleteRenderbuffers = reinterpret_cast<functions::PFNGLDELETERENDERBUFFERSPROC>(wglGetProcAddress("glDeleteRenderbuffers"));
     }
 
     auto Functions::texture_functions() noexcept -> void

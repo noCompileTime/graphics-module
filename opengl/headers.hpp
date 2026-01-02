@@ -15,6 +15,7 @@
 #include "functions/commands.hpp"
 #include "functions/framebuffer.hpp"
 #include "functions/pipeline.hpp"
+#include "functions/renderbuffer.hpp"
 #include "functions/shader.hpp"
 #include "functions/shader_stage.hpp"
 #include "functions/texture.hpp"
