@@ -80,12 +80,12 @@ namespace opengl
         functions::glCreateFramebuffers      = reinterpret_cast<functions::PFNGLCREATEFRAMEBUFFERSPROC>(wglGetProcAddress("glCreateFramebuffers"));
         functions::glDeleteFramebuffers      = reinterpret_cast<functions::PFNGLDELETEFRAMEBUFFERSPROC>(wglGetProcAddress("glDeleteFramebuffers"));
 
+        functions::glBindFramebuffer         = reinterpret_cast<functions::PFNGLBINDFRAMEBUFFERPROC>(wglGetProcAddress("glBindFramebuffer"));
+
         functions::glFramebufferTexture      = reinterpret_cast<functions::PFNGLFRAMEBUFFERTEXTUREPROC>     (wglGetProcAddress("glNamedFramebufferTexture"));
         functions::glFramebufferRenderbuffer = reinterpret_cast<functions::PFNGLFRAMEBUFFERRENDERBUFFERPROC>(wglGetProcAddress("glNamedFramebufferRenderbuffer"));
 
         functions::glCheckFramebufferStatus  = reinterpret_cast<functions::PFNGLCHECKFRAMEBUFFERSTATUSPROC>(wglGetProcAddress("glCheckNamedFramebufferStatus"));
-
-        functions::glBindFramebuffer         = reinterpret_cast<functions::PFNGLBINDFRAMEBUFFERPROC>(wglGetProcAddress("glBindFramebuffer"));
     }
 
     auto Functions::renderbuffer_functions() noexcept -> void
