@@ -34,6 +34,13 @@ namespace opengl
 
             /* pipeline */
 
+            functions::glDepthMask    = reinterpret_cast<functions::PFNGLDEPTHMASKPROC> (GetProcAddress(instance, "glDepthMask"));
+            functions::glDepthFunc    = reinterpret_cast<functions::PFNGLDEPTHFUNCPROC> (GetProcAddress(instance, "glDepthFunc"));
+
+            functions::glStencilMask  = reinterpret_cast<functions::PFNGLSTENCILMASKPROC>(GetProcAddress(instance, "glStencilMask"));
+            functions::glStencilFunc  = reinterpret_cast<functions::PFNGLSTENCILFUNCPROC>(GetProcAddress(instance, "glStencilFunc"));
+            functions::glStencilOp    = reinterpret_cast<functions::PFNGLSTENCILOPPROC>  (GetProcAddress(instance, "glStencilOp"));
+
             functions::glEnable       = reinterpret_cast<functions::PFNGLENABLEPROC> (GetProcAddress(instance, "glEnable"));
             functions::glDisable      = reinterpret_cast<functions::PFNGLDISABLEPROC>(GetProcAddress(instance, "glDisable"));
 
