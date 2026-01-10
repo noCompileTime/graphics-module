@@ -8,7 +8,7 @@ namespace opengl
     {
     public:
 
-    explicit Texture(uint32_t info);
+    explicit Texture(uint32_t target);
 
         auto  create() noexcept -> void override;
         auto destroy() noexcept -> void override;

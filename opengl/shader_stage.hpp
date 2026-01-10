@@ -8,7 +8,7 @@ namespace opengl
     {
     public:
 
-    explicit ShaderStage(uint32_t info);
+    explicit ShaderStage(uint32_t  type);
 
         auto  create() noexcept -> void override;
         auto destroy() noexcept -> void override;

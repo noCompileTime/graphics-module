@@ -2,8 +2,8 @@
 
 namespace opengl
 {
-    Texture::Texture(const uint32_t info)
-        : Object { info }
+    Texture::Texture(const uint32_t target)
+        : Object { target }
     {
     }
 

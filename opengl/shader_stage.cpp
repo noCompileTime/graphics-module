@@ -2,8 +2,8 @@
 
 namespace opengl
 {
-    ShaderStage::ShaderStage(const uint32_t info)
-        : Object { info }
+    ShaderStage::ShaderStage(const uint32_t type)
+        : Object { type }
     {
     }
 
