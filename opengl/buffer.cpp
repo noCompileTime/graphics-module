@@ -22,8 +22,8 @@ namespace opengl
         functions::glBufferSubData(_handle, offset, data.size, data.ptr);
     }
 
-    auto Buffer::bind(const uint32_t target, const uint32_t location) const noexcept -> void
+    auto Buffer::bind(const uint32_t target, const uint32_t index) const noexcept -> void
     {
-        functions::glBindBufferBase(target, location, _handle);
+        functions::glBindBufferBase(target, index, _handle);
     }
 }

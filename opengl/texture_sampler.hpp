@@ -10,8 +10,8 @@ namespace opengl
         auto    create() noexcept -> void override;
         auto   destroy() noexcept -> void override;
 
-        auto parameter(uint32_t parameter, int32_t value) const noexcept -> void;
+        auto parameter(uint32_t param, int32_t value) const noexcept -> void;
 
-        auto      bind(uint32_t location)  const noexcept -> void;
+        auto      bind(uint32_t index) const noexcept -> void;
     };
 }

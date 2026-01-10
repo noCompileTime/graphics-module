@@ -27,8 +27,8 @@ namespace opengl
         functions::glTextureSubImage2D(_handle, level, 0, 0, width, height, format, constants::uint8_type, data);
     }
 
-    auto Texture::bind(const uint32_t location) const noexcept -> void
+    auto Texture::bind(const uint32_t index) const noexcept -> void
     {
-        functions::glBindTextureUnit(location, _handle);
+        functions::glBindTextureUnit(index, _handle);
     }
 }

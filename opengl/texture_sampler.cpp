@@ -12,13 +12,13 @@ namespace opengl
         functions::glDeleteSamplers(1, &_handle);
     }
 
-    auto TextureSampler::parameter(const uint32_t parameter, const int32_t value) const noexcept -> void
+    auto TextureSampler::parameter(const uint32_t param, const int32_t value) const noexcept -> void
     {
-        functions::glSamplerParameteri(_handle, parameter, value);
+        functions::glSamplerParameteri(_handle, param, value);
     }
 
-    auto TextureSampler::bind(const uint32_t location) const noexcept -> void
+    auto TextureSampler::bind(const uint32_t index) const noexcept -> void
     {
-        functions::glBindSampler(location, _handle);
+        functions::glBindSampler(index, _handle);
     }
 }
