@@ -12,6 +12,6 @@ namespace opengl
 
         auto parameter(uint32_t parameter, int32_t value) const noexcept -> void;
 
-        auto      bind(uint32_t location) const noexcept -> void;
+        auto      bind(uint32_t location)  const noexcept -> void;
     };
 }
