@@ -13,9 +13,9 @@ namespace opengl
         auto  create() noexcept -> void override;
         auto destroy() noexcept -> void override;
 
-        auto storage(uint32_t width, uint32_t height, uint32_t format, int32_t levels = 1)              const noexcept -> void;
-        auto  upload(uint32_t width, uint32_t height, uint32_t format, int32_t level, const void* data) const noexcept -> void;
+        auto storage(const core::data::image& image, uint32_t format, int32_t levels = 1) const noexcept -> void;
+        auto  upload(const core::data::image& image, uint32_t format, int32_t level  = 0) const noexcept -> void;
 
-        auto    bind(uint32_t index) const noexcept -> void;
+        auto  bind(uint32_t index) const noexcept -> void;
     };
 }
