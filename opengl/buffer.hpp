@@ -14,5 +14,6 @@ namespace opengl
         auto  upload(const core::data::buffer& buffer, uint32_t offset = 0)                      const noexcept -> void;
 
         auto  bind(uint32_t target, uint32_t index) const noexcept -> void;
+        auto  bind(uint32_t target)                 const noexcept -> void;
     };
 }

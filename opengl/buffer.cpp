@@ -26,4 +26,9 @@ namespace opengl
     {
         functions::glBindBufferBase(target, index, _handle);
     }
+
+    auto Buffer::bind(const uint32_t target) const noexcept -> void
+    {
+        functions::glBindBuffer(target, _handle);
+    }
 }
