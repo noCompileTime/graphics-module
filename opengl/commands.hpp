@@ -7,8 +7,8 @@ namespace opengl
     public:
         Commands() = delete;
 
-        static auto clear(uint32_t flags)                     noexcept -> void;
-        static auto clear(float r, float g, float b, float a) noexcept -> void;
+        static auto clear(uint32_t flags)                            noexcept -> void;
+        static auto clear(float r, float g, float b, float a = 1.0f) noexcept -> void;
 
         static auto draw_vertices(uint32_t primitive, int32_t count, int32_t offset = constants::default_offset) noexcept -> void;
         static auto draw_elements(uint32_t primitive, int32_t count, int32_t offset = constants::default_offset) noexcept -> void;
