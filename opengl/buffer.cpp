@@ -1,3 +1,5 @@
+#include "functions/buffer.hpp"
+
 #include "buffer.hpp"
 
 namespace opengl

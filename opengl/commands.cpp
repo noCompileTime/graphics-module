@@ -1,3 +1,5 @@
+#include "functions/commands.hpp"
+
 #include "commands.hpp"
 
 namespace opengl
