@@ -9,8 +9,8 @@ namespace core::data
     };
 
     template <typename type>
-              requires std::is_class_v       <type> ||
-                       std::is_integral_v    <type>
+              requires std::is_class_v <type> ||
+                       std::is_integral_v <type>
     static auto make_buffer(const std::vector<type>& elements) noexcept -> buffer
     {
         return
