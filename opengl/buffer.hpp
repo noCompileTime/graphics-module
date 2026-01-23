@@ -10,7 +10,7 @@ namespace opengl
         auto  create() noexcept -> void override;
         auto destroy() noexcept -> void override;
 
-        auto storage(      uint32_t buffer_size,       uint32_t usage  = constants::default_usage)        noexcept -> void;
+        auto storage(uint32_t buffer_size,             uint32_t usage  = constants::default_usage)        noexcept -> void;
         auto storage(const core::data::buffer& buffer, uint32_t usage  = constants::default_usage)        noexcept -> void;
         auto  upload(const core::data::buffer& buffer, uint32_t offset = constants::default_offset) const noexcept -> void;
 
