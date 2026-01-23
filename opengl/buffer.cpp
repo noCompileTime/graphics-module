@@ -14,13 +14,25 @@ namespace opengl
         functions::glDeleteBuffers(1, &_handle);
     }
 
-    auto Buffer::storage(const core::data::buffer& buffer, const uint32_t usage) const noexcept -> void
+    auto Buffer::storage(const uint32_t buffer_size, const uint32_t usage) noexcept -> void
     {
-        functions::glBufferStorage(_handle, buffer.size, buffer.ptr, usage);
+         functions::glBufferStorage(_handle, buffer_size, nullptr, usage);
+
+        _info = buffer_size;
+    }
+
+    auto Buffer::storage(const core::data::buffer& buffer, const uint32_t usage) noexcept -> void
+    {
+         functions::glBufferStorage(_handle, buffer.size, buffer.ptr, usage);
+
+        _info = buffer.size;
     }
 
     auto Buffer::upload(const core::data::buffer& buffer, const uint32_t offset) const noexcept -> void
     {
+        assert(offset      <= _info);
+        assert(buffer.size <= _info - offset);
+
         functions::glBufferSubData(_handle, offset, buffer.size, buffer.ptr);
     }
 
