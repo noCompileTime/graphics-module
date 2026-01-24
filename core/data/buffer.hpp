@@ -21,12 +21,12 @@ namespace core::data
 
     template <typename type>
               requires std::is_class_v<type>
-    static auto make_buffer(const type* ptr) noexcept -> buffer
+    static auto make_buffer(const type* object) noexcept -> buffer
     {
-        assert(ptr != nullptr);
+        assert(object != nullptr);
         return
         {
-            ptr,
+            object,
             sizeof(type)
         };
     }
