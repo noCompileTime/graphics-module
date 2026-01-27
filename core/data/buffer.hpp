@@ -24,6 +24,7 @@ namespace core::data
     static auto make_buffer(const type* object) noexcept -> buffer
     {
         assert(object != nullptr);
+
         return
         {
             object,
