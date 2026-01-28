@@ -15,7 +15,7 @@ namespace core::data
         return
         {
             elements.data(),
-            elements.size() * sizeof(type),
+            elements.size() * sizeof(type)
         };
     }
 
