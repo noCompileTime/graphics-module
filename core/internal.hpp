@@ -1,4 +1,4 @@
 #pragma once
 
-#include "data/buffer_location.hpp"
-#include "data/texture_location.hpp"
+#include "binding/buffer.hpp"
+#include "binding/texture.hpp"
