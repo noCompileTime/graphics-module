@@ -1,5 +1,3 @@
-#include "functions/texture_sampler.hpp"
-
 #include "texture_sampler.hpp"
 
 namespace opengl

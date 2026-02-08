@@ -1,5 +1,3 @@
-#include "functions/texture.hpp"
-
 #include "texture.hpp"
 
 namespace opengl

@@ -1,5 +1,3 @@
-#include "functions/vertex_array.hpp"
-
 #include "vertex_array.hpp"
 
 namespace opengl

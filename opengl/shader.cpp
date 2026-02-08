@@ -1,5 +1,3 @@
-#include "functions/shader.hpp"
-
 #include "shader.hpp"
 
 namespace opengl
