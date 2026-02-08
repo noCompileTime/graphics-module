@@ -10,5 +10,6 @@ namespace opengl::constants
 
     constexpr auto texture_2d = 0x0DE1;
 
-    constexpr auto default_level = 0;
+    constexpr auto default_level  = 0;
+    constexpr auto default_levels = 1;
 }
