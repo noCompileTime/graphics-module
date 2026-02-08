@@ -2,7 +2,7 @@
 
 namespace core::binding
 {
-    enum class buffer : unsigned int// uint32_t
+    enum class buffer : uint32_t
     {
         camera,
         transform,

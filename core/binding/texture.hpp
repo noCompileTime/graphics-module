@@ -2,7 +2,7 @@
 
 namespace core::binding
 {
-    enum class texture : unsigned int //uint32_t
+    enum class texture : uint32_t
     {
         albedo
     };
