@@ -7,6 +7,7 @@ namespace core::binding
         camera,
         transform,
 
-        material
+        material,
+        light
     };
 }
