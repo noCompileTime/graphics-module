@@ -27,11 +27,11 @@ namespace opengl
         functions::glBufferSubData(_handle, offset, buffer.size, buffer.ptr);
     }
 
-    auto Buffer::storage(const uint32_t buffer_size, const uint32_t usage) noexcept -> void
+    auto Buffer::storage(const uint32_t size, const uint32_t usage) noexcept -> void
     {
-         functions::glBufferStorage(_handle, buffer_size, nullptr, usage);
+         functions::glBufferStorage(_handle, size, nullptr, usage);
 
-        _info = buffer_size;
+        _info = size;
     }
 
     auto Buffer::bind(const uint32_t target, const uint32_t index) const noexcept -> void
