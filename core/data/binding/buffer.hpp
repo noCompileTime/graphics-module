@@ -1,6 +1,6 @@
 #pragma once
 
-namespace core::binding
+namespace core::data::binding
 {
     enum class buffer : uint32_t
     {

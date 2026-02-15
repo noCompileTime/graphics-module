@@ -2,5 +2,5 @@
 
 #include "data/buffer.hpp"
 
-#include "binding/buffer.hpp"
-#include "binding/texture.hpp"
+#include "data/binding/buffer.hpp"
+#include "data/binding/texture.hpp"
