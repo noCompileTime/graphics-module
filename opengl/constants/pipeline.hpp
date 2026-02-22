@@ -2,6 +2,13 @@
 
 namespace opengl::constants
 {
+    constexpr auto  debug_output             = 0x92E0;
+    constexpr auto  debug_output_synchronous = 0x8242;
+
+    constexpr auto     front_and_back        = 0x0408;
+    constexpr auto          fill_mode        = 0x1B02;
+    constexpr auto          line_mode        = 0x1B01;
+
     constexpr auto    cull_face = 0x0B44;
 
     constexpr auto   depth_test = 0x0B71;
