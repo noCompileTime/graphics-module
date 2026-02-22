@@ -14,7 +14,6 @@ namespace opengl
         auto attach_elements(const Buffer& buffer)                 const noexcept -> void;
 
         auto attach(const core::vertex::attribute& attribute)      const noexcept -> void;
-
         auto bind() const noexcept -> void;
     };
 }
