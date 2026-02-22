@@ -10,8 +10,6 @@ namespace opengl
         static auto init() noexcept -> void;
 
     private:
-        static auto           debug_functions() noexcept -> void;
-
         static auto          common_functions() noexcept -> void;
 
         static auto          shader_functions() noexcept -> void;

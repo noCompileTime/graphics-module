@@ -4,8 +4,6 @@ namespace opengl
 {
     auto Functions::init() noexcept -> void
     {
-               debug_functions();
-
               common_functions();
 
               shader_functions();
@@ -18,11 +16,6 @@ namespace opengl
      texture_sampler_functions();
 
         vertex_array_functions();
-    }
-
-    auto Functions::debug_functions() noexcept -> void
-    {
-        functions::glDebugMessageCallback = reinterpret_cast<functions::PFNGLDEBUGMESSAGECALLBACKPROC>(wglGetProcAddress("glDebugMessageCallback"));
     }
 
     auto Functions::common_functions() noexcept -> void
@@ -53,6 +46,10 @@ namespace opengl
 
             FreeLibrary(instance);
         }
+
+        /* pipeline */
+
+        functions::glDebugMessageCallback = reinterpret_cast<functions::PFNGLDEBUGMESSAGECALLBACKPROC>(wglGetProcAddress("glDebugMessageCallback"));
     }
 
     auto Functions::shader_functions()  noexcept -> void
