@@ -12,6 +12,7 @@
 
 #include "functions/buffer.hpp"
 #include "functions/commands.hpp"
+#include "functions/debug.hpp"
 #include "functions/framebuffer.hpp"
 #include "functions/pipeline.hpp"
 #include "functions/renderbuffer.hpp"
