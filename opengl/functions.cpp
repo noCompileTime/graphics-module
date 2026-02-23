@@ -49,7 +49,7 @@ namespace opengl
             FreeLibrary(instance);
         }
 
-        /* pipeline */
+        /* debug */
 
         functions::glDebugMessageCallback = reinterpret_cast<functions::PFNGLDEBUGMESSAGECALLBACKPROC>(wglGetProcAddress("glDebugMessageCallback"));
     }
