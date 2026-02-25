@@ -52,6 +52,7 @@ namespace opengl
         /* debug */
 
         functions::glDebugMessageCallback = reinterpret_cast<functions::PFNGLDEBUGMESSAGECALLBACKPROC>(wglGetProcAddress("glDebugMessageCallback"));
+        functions::glDebugMessageControl  = reinterpret_cast<functions::PFNGLDEBUGMESSAGECONTROLPROC> (wglGetProcAddress("glDebugMessageControl"));
     }
 
     auto Functions::shader_functions()  noexcept -> void
