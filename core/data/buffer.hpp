@@ -2,33 +2,17 @@
 
 namespace core::data // TODO rename the file to some other name?
 {
-    struct buffer    // TODO replace this with a std::pair?
-    {
-        const void*  ptr  { };
-        const size_t size { };
-    };
-
     template <typename type>
-              requires std::is_integral_v<type> || std::is_class_v<type>
-    static auto make_buffer(const std::vector<type>& elements) noexcept -> buffer
+              requires std::is_trivially_copyable_v<type>
+    static auto make_buffer(const std::vector<type>& elements) noexcept -> std::span<const std::byte>
     {
-        return
-        {
-            elements.data(),
-            elements.size() * sizeof(type)
-        };
+        return std::as_bytes(std::span { elements });
     }
 
     template <typename type>
-              requires std::is_class_v<type>
-    static auto make_buffer(const type* object) noexcept -> buffer
+              requires std::is_trivially_copyable_v<type>
+    static auto make_buffer(const type& object) noexcept -> std::span<const std::byte>
     {
-        assert(object != nullptr);
-
-        return
-        {
-            object,
-            sizeof(type)
-        };
+        return std::as_bytes(std::span { &object, 1 });
     }
 }

@@ -10,8 +10,8 @@ namespace opengl
         auto  create() noexcept -> void override;
         auto destroy() noexcept -> void override;
 
-        auto storage(const core::data::buffer& buffer, uint32_t usage)        noexcept -> void;
-        auto  upload(const core::data::buffer& buffer, uint32_t offset) const noexcept -> void;
+        auto storage(std::span<const std::byte> buffer, uint32_t usage)        noexcept -> void;
+        auto  upload(std::span<const std::byte> buffer, uint32_t offset) const noexcept -> void;
 
         //   used when you want to allocate the buffer but not actually send the data up front
         auto storage(uint32_t size, uint32_t usage)        noexcept -> void;
