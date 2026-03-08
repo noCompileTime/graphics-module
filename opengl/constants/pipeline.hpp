@@ -2,12 +2,15 @@
 
 namespace opengl::constants
 {
-    constexpr auto      cull_face = 0x0B44;
+    constexpr auto one_minus_src_alpha = 0x0303;
+    constexpr auto           src_alpha = 0x0302;
 
+    constexpr auto      cull_test = 0x0B44;
     constexpr auto     depth_test = 0x0B71;
     constexpr auto   stencil_test = 0x0B90;
 
     constexpr auto front_and_back = 0x0408;
+    constexpr auto     blend_mode = 0x0BE2;
     constexpr auto      fill_mode = 0x1B02;
     constexpr auto      line_mode = 0x1B01;
 

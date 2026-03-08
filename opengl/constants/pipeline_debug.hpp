@@ -6,5 +6,5 @@ namespace opengl::constants
     constexpr auto debug_output_synchronous    = 0x8242;
     constexpr auto debug_severity_notification = 0x826B;
 
-    constexpr auto dont_care = 0x1100;
+    constexpr auto  dont_care = 0x1100;
 }
