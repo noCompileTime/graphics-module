@@ -12,7 +12,8 @@ namespace opengl::functions
     using  PFNGLVERTEXARRAYATTRIBBINDINGPROC = auto(APIENTRY*)(uint32_t vao, uint32_t index, uint32_t binding)                                                  -> void;
     using  PFNGLENABLEVERTEXARRAYATTRIBPROC  = auto(APIENTRY*)(uint32_t vao, uint32_t index)                                                                    -> void;
 
-    using  PFNGLBINDVERTEXARRAYPROC          = auto(APIENTRY*)(uint32_t array) -> void;
+    using  PFNGLBINDVERTEXARRAYPROC = auto(APIENTRY*)(uint32_t array) -> void;
+    inline PFNGLBINDVERTEXARRAYPROC glBindVertexArray;
 
     inline PFNGLCREATEVERTEXARRAYSPROC       glCreateVertexArrays;
     inline PFNGLDELETEVERTEXARRAYSPROC       glDeleteVertexArrays;
@@ -23,6 +24,4 @@ namespace opengl::functions
     inline PFNGLVERTEXARRAYATTRIBFORMATPROC  glVertexArrayAttribFormat;
     inline PFNGLVERTEXARRAYATTRIBBINDINGPROC glVertexArrayAttribBinding;
     inline PFNGLENABLEVERTEXARRAYATTRIBPROC  glEnableVertexArrayAttrib;
-
-    inline PFNGLBINDVERTEXARRAYPROC          glBindVertexArray;
 }
