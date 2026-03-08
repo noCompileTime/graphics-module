@@ -2,8 +2,11 @@
 
 namespace opengl::functions
 {
-    using  PFNGLCREATEVERTEXARRAYSPROC       = auto(APIENTRY*)(int32_t n,       uint32_t* arrays) -> void;
-    using  PFNGLDELETEVERTEXARRAYSPROC       = auto(APIENTRY*)(int32_t n, const uint32_t* arrays) -> void;
+    using  PFNGLCREATEVERTEXARRAYSPROC = auto(APIENTRY*)(int32_t n, uint32_t* arrays) -> void;
+    inline PFNGLCREATEVERTEXARRAYSPROC glCreateVertexArrays;
+
+    using  PFNGLDELETEVERTEXARRAYSPROC = auto(APIENTRY*)(int32_t n, const uint32_t* arrays) -> void;
+    inline PFNGLDELETEVERTEXARRAYSPROC glDeleteVertexArrays;
 
     using  PFNGLVERTEXARRAYVERTEXBUFFERPROC  = auto(APIENTRY*)(uint32_t vao, uint32_t index, uint32_t buffer, size_t offset, int32_t stride) -> void;
     using  PFNGLVERTEXARRAYELEMENTBUFFERPROC = auto(APIENTRY*)(uint32_t vao, uint32_t buffer)                                                -> void;
@@ -14,9 +17,6 @@ namespace opengl::functions
 
     using  PFNGLBINDVERTEXARRAYPROC = auto(APIENTRY*)(uint32_t array) -> void;
     inline PFNGLBINDVERTEXARRAYPROC glBindVertexArray;
-
-    inline PFNGLCREATEVERTEXARRAYSPROC       glCreateVertexArrays;
-    inline PFNGLDELETEVERTEXARRAYSPROC       glDeleteVertexArrays;
 
     inline PFNGLVERTEXARRAYVERTEXBUFFERPROC  glVertexArrayVertexBuffer;
     inline PFNGLVERTEXARRAYELEMENTBUFFERPROC glVertexArrayElementBuffer;
