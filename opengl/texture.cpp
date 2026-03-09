@@ -19,8 +19,6 @@ namespace opengl
 
     auto Texture::storage(const core::data::image& image, const uint32_t format, const int32_t levels) const noexcept -> void
     {
-        assert(image.width == image.height);
-
         functions::glTextureStorage2D(_handle, levels, format, image.width, image.height);
     }
 
