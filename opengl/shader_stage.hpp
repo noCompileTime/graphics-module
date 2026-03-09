@@ -13,6 +13,6 @@ namespace opengl
         auto  create() noexcept -> void override;
         auto destroy() noexcept -> void override;
 
-        auto  source(const std::vector<char>& source) const noexcept -> void;
+        auto source(const std::vector<char>& source) const noexcept -> void; // TODO use a std::span here also?
     };
 }
