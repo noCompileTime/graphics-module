@@ -4,9 +4,9 @@ namespace core::data // TODO rename the file to some other name?
 {
     template <typename type>
               requires std::is_trivially_copyable_v<type>
-    static auto make_buffer(const std::vector<type>& elements) noexcept -> std::span<const std::byte>
+    static auto make_buffer(const std::vector<type>& data) noexcept -> std::span<const std::byte>
     {
-        return std::as_bytes(std::span { elements });
+        return std::as_bytes(std::span { data });
     }
 
     template <typename type>

@@ -12,26 +12,19 @@ namespace opengl
         functions::glDeleteBuffers(1, &_handle);
     }
 
-    auto Buffer::storage(const std::span<const std::byte> buffer, const uint32_t usage) noexcept -> void
+    auto Buffer::storage(const std::span<const std::byte> buffer, const uint32_t usage) const noexcept -> void
     {
          functions::glBufferStorage(_handle, buffer.size(), buffer.data(), usage);
-
-        _info = buffer.size();
     }
 
     auto Buffer::upload(const std::span<const std::byte> buffer, const uint32_t offset) const noexcept -> void
     {
-        assert(offset        <= _info);
-        assert(buffer.size() <= _info - offset);
-
         functions::glBufferSubData(_handle, offset, buffer.size(), buffer.data());
     }
 
-    auto Buffer::storage(const uint32_t size, const uint32_t usage) noexcept -> void
+    auto Buffer::storage(const uint32_t size, const uint32_t usage) const noexcept -> void
     {
          functions::glBufferStorage(_handle, size, nullptr, usage);
-
-        _info = size;
     }
 
     auto Buffer::bind(const uint32_t target, const uint32_t index) const noexcept -> void
