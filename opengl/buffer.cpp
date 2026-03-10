@@ -14,7 +14,7 @@ namespace opengl
 
     auto Buffer::storage(const std::span<const std::byte> buffer, const uint32_t flags) const noexcept -> void
     {
-         functions::glBufferStorage(_handle, buffer.size(), buffer.data(), flags);
+        functions::glBufferStorage(_handle, buffer.size(), buffer.data(), flags);
     }
 
     auto Buffer::upload(const std::span<const std::byte> buffer, const uint32_t offset) const noexcept -> void
@@ -24,7 +24,7 @@ namespace opengl
 
     auto Buffer::storage(const uint32_t size, const uint32_t usage) const noexcept -> void
     {
-         functions::glBufferStorage(_handle, size, nullptr, usage);
+        functions::glBufferStorage(_handle, size, nullptr, usage);
     }
 
     auto Buffer::bind(const uint32_t target, const uint32_t index) const noexcept -> void
