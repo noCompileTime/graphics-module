@@ -8,13 +8,12 @@ namespace opengl::functions
     using  PFNGLDRAWARRAYSPROC   = auto(APIENTRY*)(uint32_t mode, int32_t first,  int32_t count)                      -> void;
     using  PFNGLDRAWELEMENTSPROC = auto(APIENTRY*)(uint32_t mode, int32_t count, uint32_t  type, const void* indices) -> void;
 
-    using  PFNGLVIEWPORTPROC     = auto(APIENTRY*)(int32_t x, int32_t y, int32_t width, int32_t height) -> void;
+    using  PFNGLVIEWPORTPROC = void(APIENTRY*)(int32_t x, int32_t y, int32_t width, int32_t height);
+    inline PFNGLVIEWPORTPROC glViewport;
 
     inline PFNGLCLEARPROC        glClear;
     inline PFNGLCLEARCOLORPROC   glClearColor;
 
     inline PFNGLDRAWARRAYSPROC   glDrawArrays;
     inline PFNGLDRAWELEMENTSPROC glDrawElements;
-
-    inline PFNGLVIEWPORTPROC     glViewport;
 }
