@@ -1,4 +1,4 @@
 #pragma once
 
-#include "data/binding/buffer.hpp"
-#include "data/binding/texture.hpp"
+#include "binding/buffer.hpp"
+#include "binding/texture.hpp"
