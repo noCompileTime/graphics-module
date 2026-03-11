@@ -2,23 +2,24 @@
 
 namespace opengl::functions
 {
-    using  PFNGLCREATEBUFFERSPROC   = auto(APIENTRY*)(int32_t n,       uint32_t* buffers) -> void;
-    using  PFNGLDELETEBUFFERSPROC   = auto(APIENTRY*)(int32_t n, const uint32_t* buffers) -> void;
+     using PFNGLCREATEBUFFERSPROC = void(APIENTRY*)(int32_t n, uint32_t* buffers);
+    inline PFNGLCREATEBUFFERSPROC glCreateBuffers;
 
-    using  PFNGLBINDBUFFERPROC      = auto(APIENTRY*)(uint32_t target,                 uint32_t buffer)                              -> void;
-    using  PFNGLBINDBUFFERBASEPROC  = auto(APIENTRY*)(uint32_t target, uint32_t index, uint32_t buffer)                              -> void;
-    using  PFNGLBINDBUFFERRANGEPROC = auto(APIENTRY*)(uint32_t target, uint32_t index, uint32_t buffer, size_t offset, size_t size)  -> void;
+     using PFNGLDELETEBUFFERSPROC = void(APIENTRY*)(int32_t n, const uint32_t* buffers);
+    inline PFNGLDELETEBUFFERSPROC glDeleteBuffers;
 
-    using  PFNGLBUFFERSTORAGEPROC   = auto(APIENTRY*)(uint32_t buffer, size_t size,                const void* data, uint32_t flags) -> void;
-    using  PFNGLBUFFERSUBDATAPROC   = auto(APIENTRY*)(uint32_t buffer, size_t offset, size_t size, const void* data)                 -> void;
+     using PFNGLBINDBUFFERPROC = void(APIENTRY*)(uint32_t target, uint32_t buffer);
+    inline PFNGLBINDBUFFERPROC glBindBuffer;
 
-    inline PFNGLCREATEBUFFERSPROC   glCreateBuffers;
-    inline PFNGLDELETEBUFFERSPROC   glDeleteBuffers;
+     using PFNGLBINDBUFFERBASEPROC = void(APIENTRY*)(uint32_t target, uint32_t index, uint32_t buffer);
+    inline PFNGLBINDBUFFERBASEPROC glBindBufferBase;
 
-    inline PFNGLBINDBUFFERPROC      glBindBuffer;
-    inline PFNGLBINDBUFFERBASEPROC  glBindBufferBase;
+     using PFNGLBINDBUFFERRANGEPROC = void(APIENTRY*)(uint32_t target, uint32_t index, uint32_t buffer, size_t offset, size_t size);
     inline PFNGLBINDBUFFERRANGEPROC glBindBufferRange;
 
-    inline PFNGLBUFFERSTORAGEPROC   glBufferStorage;
-    inline PFNGLBUFFERSUBDATAPROC   glBufferSubData;
+     using PFNGLBUFFERSTORAGEPROC = void(APIENTRY*)(uint32_t buffer, size_t size, const void* data, uint32_t flags);
+    inline PFNGLBUFFERSTORAGEPROC glBufferStorage;
+
+     using PFNGLBUFFERSUBDATAPROC = void(APIENTRY*)(uint32_t buffer, size_t offset, size_t size, const void* data);
+    inline PFNGLBUFFERSUBDATAPROC glBufferSubData;
 }

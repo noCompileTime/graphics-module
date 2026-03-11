@@ -2,18 +2,18 @@
 
 namespace opengl::functions
 {
-    using  PFNGLCLEARPROC        = auto(APIENTRY*)(uint32_t mask)                                   -> void;
-    using  PFNGLCLEARCOLORPROC   = auto(APIENTRY*)(float red, float green, float blue, float alpha) -> void;
+     using PFNGLCLEARPROC = void(APIENTRY*)(uint32_t mask);
+    inline PFNGLCLEARPROC glClear;
 
-    using  PFNGLDRAWARRAYSPROC   = auto(APIENTRY*)(uint32_t mode, int32_t first,  int32_t count)                      -> void;
-    using  PFNGLDRAWELEMENTSPROC = auto(APIENTRY*)(uint32_t mode, int32_t count, uint32_t  type, const void* indices) -> void;
+     using PFNGLCLEARCOLORPROC = void(APIENTRY*)(float red, float green, float blue, float alpha);
+    inline PFNGLCLEARCOLORPROC glClearColor;
 
-    using  PFNGLVIEWPORTPROC = void(APIENTRY*)(int32_t x, int32_t y, int32_t width, int32_t height);
-    inline PFNGLVIEWPORTPROC glViewport;
+     using PFNGLDRAWARRAYSPROC = void(APIENTRY*)(uint32_t mode, int32_t first, int32_t count);
+    inline PFNGLDRAWARRAYSPROC glDrawArrays;
 
-    inline PFNGLCLEARPROC        glClear;
-    inline PFNGLCLEARCOLORPROC   glClearColor;
-
-    inline PFNGLDRAWARRAYSPROC   glDrawArrays;
+     using PFNGLDRAWELEMENTSPROC = void(APIENTRY*)(uint32_t mode, int32_t count, uint32_t type, const void* indices);
     inline PFNGLDRAWELEMENTSPROC glDrawElements;
+
+     using PFNGLVIEWPORTPROC = void(APIENTRY*)(int32_t x, int32_t y, int32_t width, int32_t height);
+    inline PFNGLVIEWPORTPROC glViewport;
 }

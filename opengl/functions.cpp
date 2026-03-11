@@ -127,7 +127,6 @@ namespace opengl
         functions::glDeleteSamplers    = reinterpret_cast<functions::PFNGLDELETESAMPLERSPROC>(wglGetProcAddress("glDeleteSamplers"));
 
         functions::glSamplerParameteri = reinterpret_cast<functions::PFNGLSAMPLERPARAMETERIPROC>(wglGetProcAddress("glSamplerParameteri"));
-
         functions::glBindSampler       = reinterpret_cast<functions::PFNGLBINDSAMPLERPROC>(wglGetProcAddress("glBindSampler"));
     }
 
