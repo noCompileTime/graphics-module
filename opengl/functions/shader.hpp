@@ -2,14 +2,14 @@
 
 namespace opengl::functions
 {
-    using  PFNGLCREATEPROGRAMPROC = auto(APIENTRY*)()                 -> uint32_t;
-    using  PFNGLDELETEPROGRAMPROC = auto(APIENTRY*)(uint32_t program) -> void;
+    using  PFNGLCREATEPROGRAMPROC = uint32_t(APIENTRY*)();
+    using  PFNGLDELETEPROGRAMPROC = void(APIENTRY*)(uint32_t program);
 
-    using  PFNGLUSEPROGRAMPROC    = auto(APIENTRY*)(uint32_t program) -> void;
-    using  PFNGLLINKPROGRAMPROC   = auto(APIENTRY*)(uint32_t program) -> void;
+    using  PFNGLUSEPROGRAMPROC    = void(APIENTRY*)(uint32_t program);
+    using  PFNGLLINKPROGRAMPROC   = void(APIENTRY*)(uint32_t program);
 
-    using  PFNGLATTACHSHADERPROC  = auto(APIENTRY*)(uint32_t program, uint32_t shader) -> void;
-    using  PFNGLDETACHSHADERPROC  = auto(APIENTRY*)(uint32_t program, uint32_t shader) -> void;
+    using  PFNGLATTACHSHADERPROC  = void(APIENTRY*)(uint32_t program, uint32_t shader);
+    using  PFNGLDETACHSHADERPROC  = void(APIENTRY*)(uint32_t program, uint32_t shader);
 
     inline PFNGLCREATEPROGRAMPROC glCreateProgram;
     inline PFNGLDELETEPROGRAMPROC glDeleteProgram;
