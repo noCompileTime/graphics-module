@@ -13,6 +13,6 @@ namespace opengl
         static auto draw_vertices(uint32_t primitive, int32_t count, int32_t offset) noexcept -> void;
         static auto draw_elements(uint32_t primitive, int32_t count, int32_t offset) noexcept -> void;
 
-        static auto viewport(int32_t x, int32_t y, int32_t width, int32_t height)    noexcept -> void;
+        static auto viewport(int32_t x, int32_t y, int32_t width, int32_t height) noexcept -> void;
     };
 }
