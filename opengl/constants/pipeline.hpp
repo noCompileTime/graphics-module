@@ -10,13 +10,14 @@ namespace opengl::constants
     constexpr auto   stencil_test = 0x0B90;
 
     constexpr auto front_and_back = 0x0408;
+
     constexpr auto     blend_mode = 0x0BE2;
     constexpr auto      fill_mode = 0x1B02;
     constexpr auto      line_mode = 0x1B01;
 
-    constexpr auto  always  = 0x0207;
-    constexpr auto  replace = 0x1E01;
-    constexpr auto notequal = 0x0205;
-    constexpr auto   keep   = 0x1E00;
-    constexpr auto   less   = 0x0201;
+    constexpr auto always    = 0x0207;
+    constexpr auto replace   = 0x1E01;
+    constexpr auto keep      = 0x1E00;
+    constexpr auto not_equal = 0x0205;
+    constexpr auto less      = 0x0201;
 }
