@@ -8,6 +8,9 @@ namespace opengl::functions
      using PFNGLDEPTHFUNCPROC = void(APIENTRY*)(uint32_t func);
     inline PFNGLDEPTHFUNCPROC glDepthFunc;
 
+     using PFNGLBLENDFUNCPROC = void(APIENTRY*)(uint32_t sfactor, uint32_t dfactor);
+    inline PFNGLBLENDFUNCPROC glBlendFunc;
+
      using PFNGLSTENCILMASKPROC = void(APIENTRY*)(uint32_t mask);
     inline PFNGLSTENCILMASKPROC glStencilMask;
 
