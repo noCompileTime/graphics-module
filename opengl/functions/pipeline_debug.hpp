@@ -9,4 +9,7 @@ namespace opengl::functions
 
      using PFNGLDEBUGMESSAGECONTROLPROC = void(APIENTRY*)(uint32_t source, uint32_t type, uint32_t severity, int32_t count, const uint32_t* ids, uint8_t enabled);
     inline PFNGLDEBUGMESSAGECONTROLPROC glDebugMessageControl;
+
+     using PFNGLPOLYGONMODEPROC = void(APIENTRY*)(uint32_t face, uint32_t mode);
+    inline PFNGLPOLYGONMODEPROC glPolygonMode;
 }

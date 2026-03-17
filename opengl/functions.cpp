@@ -43,10 +43,12 @@ namespace opengl
             functions::glStencilFunc  = reinterpret_cast<functions::PFNGLSTENCILFUNCPROC> (GetProcAddress(instance, "glStencilFunc"));
             functions::glStencilOp    = reinterpret_cast<functions::PFNGLSTENCILOPPROC>   (GetProcAddress(instance, "glStencilOp"));
 
-            functions::glPolygonMode  = reinterpret_cast<functions::PFNGLPOLYGONMODEPROC> (GetProcAddress(instance, "glPolygonMode"));
-
             functions::glEnable       = reinterpret_cast<functions::PFNGLENABLEPROC>      (GetProcAddress(instance, "glEnable"));
             functions::glDisable      = reinterpret_cast<functions::PFNGLDISABLEPROC>     (GetProcAddress(instance, "glDisable"));
+
+            /* debug */
+
+            functions::glPolygonMode  = reinterpret_cast<functions::PFNGLPOLYGONMODEPROC> (GetProcAddress(instance, "glPolygonMode"));
 
             FreeLibrary(instance);
         }
