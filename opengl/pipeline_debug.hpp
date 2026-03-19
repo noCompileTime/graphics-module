@@ -9,6 +9,6 @@ namespace opengl
 
         static auto init() noexcept -> void;
 
-        static auto polygon_mode(uint32_t mode) noexcept -> void;
+        static auto polygon(uint32_t mode) noexcept -> void;
     };
 }
