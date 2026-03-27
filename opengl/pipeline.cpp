@@ -11,4 +11,9 @@ namespace opengl
     {
         functions::glDisable(flag);
     }
+
+    auto Pipeline::polygon(const uint32_t mode) noexcept -> void
+    {
+        functions::glPolygonMode(constants::front_and_back, mode);
+    }
 }
