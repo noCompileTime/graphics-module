@@ -20,6 +20,9 @@ namespace opengl::functions
      using PFNGLSTENCILOPPROC = void(APIENTRY*)(uint32_t fail, uint32_t zfail, uint32_t zpass);
     inline PFNGLSTENCILOPPROC glStencilOp;
 
+     using PFNGLPOLYGONMODEPROC = void(APIENTRY*)(uint32_t face, uint32_t mode);
+    inline PFNGLPOLYGONMODEPROC glPolygonMode;
+
      using PFNGLENABLEPROC = void(APIENTRY*)(uint32_t cap);
     inline PFNGLENABLEPROC glEnable;
 
