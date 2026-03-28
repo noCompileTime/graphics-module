@@ -15,6 +15,8 @@ namespace opengl::constants
     constexpr auto   depth_test = 0x0B71;
     constexpr auto stencil_test = 0x0B90;
 
+    constexpr auto multisample  = 0x809D;
+
     constexpr auto always       = 0x0207;
     constexpr auto replace      = 0x1E01;
     constexpr auto keep         = 0x1E00;
