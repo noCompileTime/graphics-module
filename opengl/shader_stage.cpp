@@ -1,5 +1,8 @@
 #include "shader_stage.hpp"
 
+#include "constants/shader_stage.hpp"
+#include "functions/shader_stage.hpp"
+
 namespace opengl
 {
     ShaderStage::ShaderStage(const uint32_t type)

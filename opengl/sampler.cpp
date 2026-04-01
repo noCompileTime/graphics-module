@@ -1,5 +1,8 @@
 #include "sampler.hpp"
 
+#include "constants/sampler.hpp"
+#include "functions/sampler.hpp"
+
 namespace opengl
 {
     auto Sampler::create() noexcept -> void

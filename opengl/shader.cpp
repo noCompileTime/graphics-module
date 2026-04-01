@@ -1,5 +1,7 @@
 #include "shader.hpp"
 
+#include "functions/shader.hpp"
+
 namespace opengl
 {
     auto Shader::create() noexcept -> void

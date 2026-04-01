@@ -1,5 +1,8 @@
 #include "pipeline_debug.hpp"
 
+#include "constants/pipeline_debug.hpp"
+#include "functions/pipeline_debug.hpp"
+
 namespace opengl
 {
     auto PipelineDebug::init() noexcept -> void

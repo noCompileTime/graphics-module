@@ -1,5 +1,15 @@
 #include "functions.hpp"
 
+#include "functions/framebuffer.hpp"
+#include "functions/shader.hpp"
+#include "functions/texture.hpp"
+#include "functions/sampler.hpp"
+#include "functions/shader_stage.hpp"
+#include "functions/buffer.hpp"
+#include "functions/renderbuffer.hpp"
+#include "functions/commands.hpp"
+#include "functions/pipeline_debug.hpp"
+
 namespace opengl
 {
     auto Functions::init() noexcept -> void

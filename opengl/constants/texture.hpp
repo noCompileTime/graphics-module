@@ -1,5 +1,7 @@
 #pragma once
 
+#include "common.hpp"
+
 namespace opengl::constants
 {
     constexpr auto texture_2d = 0x0DE1;

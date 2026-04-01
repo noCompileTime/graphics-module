@@ -1,5 +1,8 @@
 #include "pipeline.hpp"
 
+#include "constants/pipeline.hpp"
+#include "functions/pipeline.hpp"
+
 namespace opengl
 {
     auto Pipeline::enable(const uint32_t flag) noexcept -> void

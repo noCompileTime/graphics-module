@@ -1,5 +1,7 @@
 #include "buffer.hpp"
 
+#include "functions/buffer.hpp"
+
 namespace opengl
 {
     auto Buffer::create() noexcept -> void
