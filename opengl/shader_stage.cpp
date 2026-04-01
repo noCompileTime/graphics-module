@@ -1,8 +1,5 @@
 #include "shader_stage.hpp"
 
-#include "constants/shader_stage.hpp"
-#include "functions/shader_stage.hpp"
-
 namespace opengl
 {
     ShaderStage::ShaderStage(const uint32_t type)
@@ -20,9 +17,9 @@ namespace opengl
         functions::glDeleteShader(_handle);
     }
 
-    auto ShaderStage::source(const std::span<const std::byte> source) const noexcept -> void
+    auto ShaderStage::source(const std::span<const std::byte> source, uint32_t format) const noexcept -> void
     {
-        functions::glShaderBinary(1, &_handle, constants::binary_format, source.data(), source.size());
+        functions::glShaderBinary(1, &_handle, format, source.data(), source.size());
         functions::glSpecializeShader(_handle, "main", 0, nullptr, nullptr);
     }
 }
