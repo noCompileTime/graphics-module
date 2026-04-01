@@ -1,3 +1,6 @@
+#include "functions/shader_stage.hpp"
+#include "functions/pipeline_debug.hpp"
+
 #include "functions.hpp"
 
 namespace opengl

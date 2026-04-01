@@ -1,3 +1,6 @@
+#include "constants/pipeline_debug.hpp"
+#include "functions/pipeline_debug.hpp"
+
 #include "pipeline_debug.hpp"
 
 namespace opengl
@@ -11,5 +14,10 @@ namespace opengl
             std::println("{}", message);
 
         }, nullptr);
+    }
+
+    auto PipelineDebug::enable(const uint32_t severity) noexcept -> void
+    {
+        functions::glDebugMessageControl(constants::dont_care, constants::dont_care, severity, 0, nullptr, true);
     }
 }

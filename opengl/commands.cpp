@@ -19,7 +19,7 @@ namespace opengl
 
     auto Commands::draw_elements(const uint32_t primitive, const int32_t count, const uint32_t type, const int32_t offset) noexcept -> void
     {
-        functions::glDrawElements(primitive, count, type, reinterpret_cast<const void*>(offset * sizeof(uint32_t)));
+        functions::glDrawElements(primitive, count, type, reinterpret_cast<const void*>(offset * sizeof(uint32_t))); // TODO here sizeof should be different if the type is not uint32_t
     }
 
     auto Commands::viewport(const int32_t x, const int32_t y, const int32_t width, const int32_t height) noexcept -> void
