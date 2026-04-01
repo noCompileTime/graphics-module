@@ -4,7 +4,7 @@
 
 namespace opengl
 {
-    class TextureSampler final : public Object
+    class Sampler final : public Object
     {
     public:
         auto  create() noexcept -> void override;
