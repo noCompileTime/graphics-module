@@ -13,5 +13,3 @@
 #include "functions/pipeline_debug.hpp"
 #include "functions/framebuffer.hpp"
 #include "functions/renderbuffer.hpp"
-
-#include "constants/pipeline_debug.hpp"

@@ -7,6 +7,4 @@ namespace opengl::constants
 
     constexpr auto    float_type = 0x1406;
     constexpr auto      int_type = 0x1404;
-
-    constexpr auto     dont_care = 0x1100;
 }

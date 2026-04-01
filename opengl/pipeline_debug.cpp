@@ -2,13 +2,8 @@
 
 namespace opengl
 {
-    auto PipelineDebug::init() noexcept -> void
+    auto PipelineDebug::enable() noexcept -> void
     {
-        functions::glEnable(constants::debug_output);
-        //functions::glEnable(constants::debug_output_synchronous);
-
-        //functions::glDebugMessageControl(constants::dont_care, constants::dont_care, constants::debug_severity_notification, 0, nullptr, false);
-
         functions::glDebugMessageCallback([](uint32_t /* source   */,
                                              uint32_t /* type     */,
                                              uint32_t /* id       */,

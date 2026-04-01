@@ -7,6 +7,6 @@ namespace opengl
     public:
         PipelineDebug() = delete;
 
-        static auto init() noexcept -> void;
+        static auto enable() noexcept -> void;
     };
 }
