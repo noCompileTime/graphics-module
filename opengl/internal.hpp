@@ -1,15 +1,9 @@
 #pragma once
 
-#include "constants/buffer.hpp"   // TODO we need all of them?
-#include "constants/commands.hpp"
-#include "constants/common.hpp"
-#include "constants/framebuffer.hpp"
+#include "constants/common.hpp" // TODO move this in the file sources?
 #include "constants/pipeline.hpp"
 #include "constants/pipeline_debug.hpp"
-#include "constants/renderbuffer.hpp"
 #include "constants/shader.hpp"
-#include "constants/texture.hpp"
-#include "constants/texture_sampler.hpp"
 
 #include "functions/buffer.hpp"
 #include "functions/commands.hpp"
