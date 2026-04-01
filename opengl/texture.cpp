@@ -1,8 +1,5 @@
 #include "texture.hpp"
 
-#include "constants/texture.hpp"
-#include "functions/texture.hpp"
-
 namespace opengl
 {
     Texture::Texture(const uint32_t target)
@@ -25,9 +22,9 @@ namespace opengl
         functions::glTextureStorage2D(_handle, levels, format, width, height);
     }
 
-    auto Texture::upload(const int32_t width, const int32_t height, const uint32_t format, const int32_t level, const std::span<const uint8_t> buffer) const noexcept -> void
+    auto Texture::upload(const int32_t width, const int32_t height, const uint32_t format, const int32_t level, uint32_t type, const std::span<const uint8_t> buffer) const noexcept -> void
     {
-        functions::glTextureSubImage2D(_handle, level, 0, 0, width, height, format, constants::unsigned_byte, buffer.data()); // TODO expose the type parameter
+        functions::glTextureSubImage2D(_handle, level, 0, 0, width, height, format, type, buffer.data());
     }
 
     auto Texture::bind(const uint32_t index) const noexcept -> void
