@@ -14,12 +14,12 @@ namespace opengl::functions
      using PFNGLBINDBUFFERBASEPROC = void(APIENTRY*)(uint32_t target, uint32_t index, uint32_t buffer);
     inline PFNGLBINDBUFFERBASEPROC glBindBufferBase;
 
-     using PFNGLBINDBUFFERRANGEPROC = void(APIENTRY*)(uint32_t target, uint32_t index, uint32_t buffer, size_t offset, size_t size);
+     using PFNGLBINDBUFFERRANGEPROC = void(APIENTRY*)(std::uint32_t target, std::uint32_t index, std::uint32_t buffer, std::size_t offset, std::size_t size);
     inline PFNGLBINDBUFFERRANGEPROC glBindBufferRange;
 
-     using PFNGLBUFFERSTORAGEPROC = void(APIENTRY*)(uint32_t buffer, size_t size, const void* data, uint32_t flags);
+     using PFNGLBUFFERSTORAGEPROC = void(APIENTRY*)(std::uint32_t buffer, std::size_t size, const void* data, std::uint32_t flags);
     inline PFNGLBUFFERSTORAGEPROC glBufferStorage;
 
-     using PFNGLBUFFERSUBDATAPROC = void(APIENTRY*)(uint32_t buffer, size_t offset, size_t size, const void* data);
+     using PFNGLBUFFERSUBDATAPROC = void(APIENTRY*)(std::uint32_t buffer, std::size_t offset, std::size_t size, const void* data);
     inline PFNGLBUFFERSUBDATAPROC glBufferSubData;
 }
