@@ -17,7 +17,7 @@ namespace opengl
         functions::glBufferStorage(_handle, buffer.size(), buffer.data(), flags);
     }
 
-    auto Buffer::upload(const std::span<const std::byte> buffer, const uint32_t offset) const noexcept -> void
+    auto Buffer::upload(const std::span<const std::byte> buffer, const std::uint32_t offset) const noexcept -> void
     {
         functions::glBufferSubData(_handle, offset, buffer.size(), buffer.data());
     }
