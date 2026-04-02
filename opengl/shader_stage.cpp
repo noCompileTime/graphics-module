@@ -1,6 +1,3 @@
-#include "constants/shader_stage.hpp"
-#include "functions/shader_stage.hpp"
-
 #include "shader_stage.hpp"
 
 namespace opengl

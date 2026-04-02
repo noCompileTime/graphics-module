@@ -1,6 +1,3 @@
-#include "constants/pipeline_debug.hpp"
-#include "functions/pipeline_debug.hpp"
-
 #include "pipeline_debug.hpp"
 
 namespace opengl
