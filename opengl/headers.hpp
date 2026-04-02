@@ -1,5 +1,8 @@
 #pragma once
 
+#include <cstddef>
+#include <cstdint>
+
 #include <windows.h>
 
 #include "functions/buffer.hpp"
