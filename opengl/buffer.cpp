@@ -12,7 +12,7 @@ namespace opengl
         functions::glDeleteBuffers(1, &_handle);
     }
 
-    auto Buffer::storage(const std::span<const std::byte> buffer, const uint32_t flags) const noexcept -> void
+    auto Buffer::storage(const std::span<const std::byte> buffer, const std::uint32_t flags) const noexcept -> void
     {
         functions::glBufferStorage(_handle, buffer.size(), buffer.data(), flags);
     }
