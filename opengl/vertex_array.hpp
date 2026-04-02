@@ -10,10 +10,10 @@ namespace opengl
         auto  create() noexcept -> void override;
         auto destroy() noexcept -> void override;
 
-        auto attach_vertices(const Buffer& buffer, int32_t stride) const noexcept -> void;
-        auto attach_elements(const Buffer& buffer)                 const noexcept -> void;
+        auto attach_vertices(const Buffer& buffer, std::int32_t stride) const noexcept -> void;
+        auto attach_elements(const Buffer& buffer)                      const noexcept -> void;
 
-        auto attach(const core::vertex::attribute& attribute)      const noexcept -> void;
+        auto attach(const core::vertex::attribute& attribute) const noexcept -> void;
 
         auto bind() const noexcept -> void;
     };

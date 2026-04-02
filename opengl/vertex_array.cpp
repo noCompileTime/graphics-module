@@ -12,7 +12,7 @@ namespace opengl
         functions::glDeleteVertexArrays(1, &_handle);
     }
 
-    auto VertexArray::attach_vertices(const Buffer& buffer, const int32_t stride) const noexcept -> void
+    auto VertexArray::attach_vertices(const Buffer& buffer, const std::int32_t stride) const noexcept -> void
     {
         functions::glVertexArrayVertexBuffer(_handle, 0, buffer.handle(), 0, stride);
     }

@@ -11,7 +11,7 @@ namespace opengl::functions
      using PFNGLBINDBUFFERPROC = void(APIENTRY*)(uint32_t target, uint32_t buffer);
     inline PFNGLBINDBUFFERPROC glBindBuffer;
 
-     using PFNGLBINDBUFFERBASEPROC = void(APIENTRY*)(uint32_t target, uint32_t index, uint32_t buffer);
+     using PFNGLBINDBUFFERBASEPROC = void(APIENTRY*)(std::uint32_t target, std::uint32_t index, std::uint32_t buffer);
     inline PFNGLBINDBUFFERBASEPROC glBindBufferBase;
 
      using PFNGLBINDBUFFERRANGEPROC = void(APIENTRY*)(std::uint32_t target, std::uint32_t index, std::uint32_t buffer, std::size_t offset, std::size_t size);

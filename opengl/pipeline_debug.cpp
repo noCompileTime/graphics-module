@@ -13,7 +13,7 @@ namespace opengl
         }, nullptr);
     }
 
-    auto PipelineDebug::enable(const uint32_t severity) noexcept -> void
+    auto PipelineDebug::enable(const std::uint32_t severity) noexcept -> void
     {
         functions::glDebugMessageControl(constants::dont_care, constants::dont_care, severity, 0, nullptr, true);
     }
