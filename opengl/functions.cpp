@@ -50,6 +50,10 @@ namespace opengl
 
             FreeLibrary(instance);
         }
+        else
+        {
+            // TODO handle some error message here
+        }
 
         /* debug */
 
@@ -57,7 +61,7 @@ namespace opengl
         functions::glDebugMessageControl  = reinterpret_cast<functions::PFNGLDEBUGMESSAGECONTROLPROC> (wglGetProcAddress("glDebugMessageControl"));
     }
 
-    auto Functions::shader_stages_functions()  noexcept -> void
+    auto Functions::shader_stages_functions() noexcept -> void
     {
         functions::glCreateShader     = reinterpret_cast<functions::PFNGLCREATESHADERPROC>(wglGetProcAddress("glCreateShader"));
         functions::glDeleteShader     = reinterpret_cast<functions::PFNGLDELETESHADERPROC>(wglGetProcAddress("glDeleteShader"));
@@ -91,7 +95,7 @@ namespace opengl
         functions::glBufferSubData   = reinterpret_cast<functions::PFNGLBUFFERSUBDATAPROC>(wglGetProcAddress("glNamedBufferSubData"));
     }
 
-    auto Functions::framebuffer_functions()    noexcept -> void
+    auto Functions::framebuffer_functions() noexcept -> void
     {
         functions::glCreateFramebuffers      = reinterpret_cast<functions::PFNGLCREATEFRAMEBUFFERSPROC>(wglGetProcAddress("glCreateFramebuffers"));
         functions::glDeleteFramebuffers      = reinterpret_cast<functions::PFNGLDELETEFRAMEBUFFERSPROC>(wglGetProcAddress("glDeleteFramebuffers"));
@@ -112,7 +116,7 @@ namespace opengl
         functions::glRenderbufferStorage = reinterpret_cast<functions::PFNGLRENDERBUFFERSTORAGEPROC>(wglGetProcAddress("glRenderbufferStorage"));
     }
 
-    auto Functions::texture_functions()  noexcept -> void
+    auto Functions::texture_functions() noexcept -> void
     {
         functions::glCreateTextures    = reinterpret_cast<functions::PFNGLCREATETEXTURESPROC>(wglGetProcAddress("glCreateTextures"));
         functions::glDeleteTextures    = reinterpret_cast<functions::PFNGLDELETETEXTURESPROC>(wglGetProcAddress("glDeleteTextures"));
@@ -132,7 +136,7 @@ namespace opengl
         functions::glBindSampler       = reinterpret_cast<functions::PFNGLBINDSAMPLERPROC>(wglGetProcAddress("glBindSampler"));
     }
 
-    auto Functions::vertex_array_functions()   noexcept -> void
+    auto Functions::vertex_array_functions() noexcept -> void
     {
         functions::glCreateVertexArrays        = reinterpret_cast<functions::PFNGLCREATEVERTEXARRAYSPROC>(wglGetProcAddress("glCreateVertexArrays"));
         functions::glDeleteVertexArrays        = reinterpret_cast<functions::PFNGLDELETEVERTEXARRAYSPROC>(wglGetProcAddress("glDeleteVertexArrays"));
