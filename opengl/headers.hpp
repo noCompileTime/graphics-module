@@ -20,6 +20,7 @@
 #include "constants/buffer.hpp"
 #include "constants/commands.hpp"
 #include "constants/common.hpp"
+#include "constants/framebuffer.hpp"
 #include "constants/pipeline.hpp"
 #include "constants/pipeline_debug.hpp"
 #include "constants/sampler.hpp"
