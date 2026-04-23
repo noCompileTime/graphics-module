@@ -113,7 +113,7 @@ namespace opengl
         functions::glCreateRenderbuffers = reinterpret_cast<functions::PFNGLCREATERENDERBUFFERSPROC>(wglGetProcAddress("glCreateRenderbuffers"));
         functions::glDeleteRenderbuffers = reinterpret_cast<functions::PFNGLDELETERENDERBUFFERSPROC>(wglGetProcAddress("glDeleteRenderbuffers"));
 
-        functions::glRenderbufferStorage = reinterpret_cast<functions::PFNGLRENDERBUFFERSTORAGEPROC>(wglGetProcAddress("glRenderbufferStorage"));
+        functions::glRenderbufferStorage = reinterpret_cast<functions::PFNGLRENDERBUFFERSTORAGEPROC>(wglGetProcAddress("glNamedRenderbufferStorage"));
     }
 
     auto Functions::texture_functions() noexcept -> void
