@@ -23,6 +23,7 @@
 #include "constants/framebuffer.hpp"
 #include "constants/pipeline.hpp"
 #include "constants/pipeline_debug.hpp"
+#include "constants/renderbuffer.hpp"
 #include "constants/sampler.hpp"
 #include "constants/shader_stage.hpp"
 #include "constants/texture.hpp"
