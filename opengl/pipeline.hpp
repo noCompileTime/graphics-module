@@ -10,7 +10,6 @@ namespace opengl
 
         static auto polygon(std::uint32_t face, std::uint32_t mode) noexcept -> void;
 
-    private:
-        Pipeline() = delete;
+       Pipeline() = delete;
     };
 }

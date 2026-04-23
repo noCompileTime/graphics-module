@@ -12,14 +12,14 @@ namespace opengl
         functions::glDeleteFramebuffers(1, &_handle);
     }
 
-    auto Framebuffer::attach(const Texture& texture, const uint32_t attachment, const uint32_t level) const noexcept -> void
+    auto Framebuffer::attach(const Texture& texture, const uint32_t attachment, const int32_t level) const noexcept -> void
     {
         functions::glFramebufferTexture(_handle, attachment, texture.handle(), level);
     }
 
-    auto Framebuffer::status() const noexcept -> uint32_t
+    auto Framebuffer::complete() const noexcept -> bool
     {
-        return functions::glCheckFramebufferStatus(_handle, constants::framebuffer);
+        return functions::glCheckFramebufferStatus(_handle, constants::framebuffer) == constants::framebuffer_complete;
     }
 
     auto Framebuffer::bind() const noexcept -> void

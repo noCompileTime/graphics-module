@@ -10,10 +10,10 @@ namespace opengl
         auto  create() noexcept -> void override;
         auto destroy() noexcept -> void override;
 
-        auto attach(const Texture& texture, uint32_t attachment, uint32_t level) const noexcept -> void;
+        auto attach(const Texture& texture, uint32_t attachment, int32_t level) const noexcept -> void;
 
-        auto status() const noexcept -> uint32_t;
-        auto   bind() const noexcept -> void;
+        auto complete() const noexcept -> bool;
+        auto     bind() const noexcept -> void;
 
         /* TODO implement this instead of glClearColor or glClear
 
