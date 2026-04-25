@@ -17,6 +17,9 @@ namespace opengl::functions
      using PFNGLFRAMEBUFFERRENDERBUFFERPROC = void(APIENTRY*)(uint32_t framebuffer, uint32_t attachment, uint32_t target, uint32_t renderbuffer);
     inline PFNGLFRAMEBUFFERRENDERBUFFERPROC glFramebufferRenderbuffer;
 
+     using PFNGLCLEARFRAMEBUFFERFVPROC = void(APIENTRY*)(std::uint32_t framebuffer, std::uint32_t buffer, std::int32_t drawbuffer, const float* value);
+    inline PFNGLCLEARFRAMEBUFFERFVPROC glClearFramebufferfv;
+
      using PFNGLCHECKFRAMEBUFFERSTATUSPROC = uint32_t(APIENTRY*)(uint32_t framebuffer, uint32_t target);
     inline PFNGLCHECKFRAMEBUFFERSTATUSPROC glCheckFramebufferStatus;
 }
