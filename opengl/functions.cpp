@@ -105,6 +105,8 @@ namespace opengl
         functions::glFramebufferTexture      = reinterpret_cast<functions::PFNGLFRAMEBUFFERTEXTUREPROC>     (wglGetProcAddress("glNamedFramebufferTexture"));
         functions::glFramebufferRenderbuffer = reinterpret_cast<functions::PFNGLFRAMEBUFFERRENDERBUFFERPROC>(wglGetProcAddress("glNamedFramebufferRenderbuffer"));
 
+        functions::glClearFramebufferfv      = reinterpret_cast<functions::PFNGLCLEARFRAMEBUFFERFVPROC>(wglGetProcAddress("glClearNamedFramebufferfv"));
+
         functions::glCheckFramebufferStatus  = reinterpret_cast<functions::PFNGLCHECKFRAMEBUFFERSTATUSPROC>(wglGetProcAddress("glCheckNamedFramebufferStatus"));
     }
 
