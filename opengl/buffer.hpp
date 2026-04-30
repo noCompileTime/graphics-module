@@ -10,11 +10,10 @@ namespace opengl
         auto  create() noexcept -> void override;
         auto destroy() noexcept -> void override;
 
-        auto storage(std::span<const std::byte> buffer, std::uint32_t flags)  const noexcept -> void;
-        auto  upload(std::span<const std::byte> buffer, std::uint32_t offset) const noexcept -> void;
+        auto storage(std::span<const std::byte> buffer, std::uint32_t flags) const noexcept -> void;
+        auto  upload(std::span<const std::byte> buffer, std::uint32_t start) const noexcept -> void;
 
-        // used when you want to allocate the buffer but not actually send the data up front
-        auto storage(std::uint32_t size, std::uint32_t flags) const noexcept -> void; // TODO remove if unused
+        auto storage(std::uint32_t size, std::uint32_t flags) const noexcept -> void;
 
         auto  bind(std::uint32_t target, std::uint32_t index) const noexcept -> void;
         auto  bind(std::uint32_t target)                      const noexcept -> void;
