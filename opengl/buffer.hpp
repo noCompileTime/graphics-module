@@ -14,9 +14,9 @@ namespace opengl
         auto  upload(std::span<const std::byte> buffer, std::uint32_t offset) const noexcept -> void;
 
         // used when you want to allocate the buffer but not actually send the data up front
-        auto storage(uint32_t size, uint32_t usage) const noexcept -> void; // TODO remove if unused
+        auto storage(std::uint32_t size, std::uint32_t flags) const noexcept -> void; // TODO remove if unused
 
-        auto  bind(uint32_t target, uint32_t index) const noexcept -> void;
-        auto  bind(uint32_t target)                 const noexcept -> void;
+        auto  bind(std::uint32_t target, std::uint32_t index) const noexcept -> void;
+        auto  bind(std::uint32_t target)                      const noexcept -> void;
     };
 }
