@@ -24,7 +24,7 @@ namespace opengl
 
     auto VertexArray::attach(const core::vertex::attribute& attribute) const noexcept -> void
     {
-        functions::glVertexArrayAttribFormat (_handle, attribute.index, attribute.size, attribute.type, 0, attribute.offset);
+        functions::glVertexArrayAttribFormat (_handle, attribute.index, attribute.size, attribute.type, 0, attribute.start);
         functions::glVertexArrayAttribBinding(_handle, attribute.index, 0); // TODO add the binding to attribute
 
         functions::glEnableVertexArrayAttrib (_handle, attribute.index);
