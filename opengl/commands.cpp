@@ -12,12 +12,12 @@ namespace opengl
         functions::glClearColor(r, g, b, a);
     }
 
-    auto Commands::draw_vertices(const std::uint32_t primitive, const std::int32_t start, const std::int32_t count) noexcept -> void
+    auto Commands::draw_vertices(const uint32_t primitive, const int32_t start, const int32_t count) noexcept -> void
     {
         functions::glDrawArrays(primitive, start, count);
     }
 
-    auto Commands::draw_elements(const std::uint32_t primitive, const std::int32_t start, const std::int32_t count, const std::uint32_t type) noexcept -> void
+    auto Commands::draw_elements(const uint32_t primitive, const int32_t start, const int32_t count, const uint32_t type) noexcept -> void
     {
         functions::glDrawElements(primitive, count, type, reinterpret_cast<const void*>(start * sizeof(uint32_t))); // TODO here sizeof should be different if the type is not uint32_t
     }
