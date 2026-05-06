@@ -12,7 +12,7 @@ namespace opengl
         functions::glDeleteFramebuffers(1, &_handle);
     }
 
-    auto Framebuffer::attach(const Texture& texture, const std::uint32_t attachment, const std::int32_t level) const noexcept -> void
+    auto Framebuffer::attach(const Texture& texture, const uint32_t attachment, const int32_t level) const noexcept -> void
     {
         functions::glFramebufferTexture(_handle, attachment, texture.handle(), level);
     }
