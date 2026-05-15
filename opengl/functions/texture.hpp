@@ -2,10 +2,10 @@
 
 namespace opengl::functions
 {
-     using PFNGLCREATETEXTURESPROC = void(APIENTRY*)(std::uint32_t target, std::int32_t n, std::uint32_t* textures);
+     using PFNGLCREATETEXTURESPROC = void(APIENTRY*)(uint32_t target, int32_t n, std::uint32_t* textures);
     inline PFNGLCREATETEXTURESPROC glCreateTextures;
 
-     using PFNGLDELETETEXTURESPROC = void(APIENTRY*)(std::int32_t n, const std::uint32_t* textures);
+     using PFNGLDELETETEXTURESPROC = void(APIENTRY*)(int32_t n, const uint32_t* textures);
     inline PFNGLDELETETEXTURESPROC glDeleteTextures;
 
      using PFNGLTEXTURESTORAGE2DPROC = void(APIENTRY*)(std::uint32_t texture, std::int32_t levels, std::uint32_t format, std::int32_t width, std::int32_t height);
