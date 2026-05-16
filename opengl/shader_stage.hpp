@@ -7,7 +7,7 @@ namespace opengl
     class ShaderStage final : public Object
     {
     public:
-     explicit ShaderStage(std::uint32_t type);
+        explicit ShaderStage(uint32_t type);
 
         auto  create() noexcept -> void override;
         auto destroy() noexcept -> void override;
