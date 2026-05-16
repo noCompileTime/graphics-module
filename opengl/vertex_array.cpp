@@ -12,6 +12,14 @@ namespace opengl
         functions::glDeleteVertexArrays(1, &_handle);
     }
 
+    auto VertexArray::attach(const vertex_attribute& attribute) const noexcept -> void
+    {
+        functions::glVertexArrayAttribFormat (_handle, attribute.index, attribute.size, attribute.type, 0, attribute.start);
+        functions::glVertexArrayAttribBinding(_handle, attribute.index, attribute.binding);
+
+        functions::glEnableVertexArrayAttrib (_handle, attribute.index);
+    }
+
     auto VertexArray::attach(const Buffer& buffer, const std::int32_t stride) const noexcept -> void
     {
         functions::glVertexArrayVertexBuffer(_handle, 0, buffer.handle(), 0, stride);
@@ -20,14 +28,6 @@ namespace opengl
     auto VertexArray::attach(const Buffer& buffer) const noexcept -> void
     {
         functions::glVertexArrayElementBuffer(_handle, buffer.handle());
-    }
-
-    auto VertexArray::attach(const core::vertex::attribute& attribute) const noexcept -> void
-    {
-        functions::glVertexArrayAttribFormat (_handle, attribute.index, attribute.size, attribute.type, 0, attribute.start);
-        functions::glVertexArrayAttribBinding(_handle, attribute.index, 0); // TODO add the binding to attribute
-
-        functions::glEnableVertexArrayAttrib (_handle, attribute.index);
     }
 
     auto VertexArray::bind() const noexcept -> void
