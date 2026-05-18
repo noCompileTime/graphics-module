@@ -16,4 +16,9 @@ namespace opengl
     {
         functions::glPolygonMode(face, mode);
     }
+
+    auto Pipeline::blend(const uint32_t src, const uint32_t dst) noexcept -> void
+    {
+        functions::glBlendFunc(src, dst);
+    }
 }
