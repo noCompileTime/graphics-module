@@ -17,12 +17,12 @@ namespace opengl
         functions::glFramebufferTexture(_handle, attachment, texture.handle(), level);
     }
 
-    auto Framebuffer::attach(const Renderbuffer& buffer, const std::uint32_t attachment) const noexcept -> void
+    auto Framebuffer::attach(const Renderbuffer& buffer, const uint32_t attachment) const noexcept -> void
     {
         functions::glFramebufferRenderbuffer(_handle, attachment, constants::renderbuffer, buffer.handle());
     }
 
-    auto Framebuffer::clear(const float* color, const std::int32_t level) const noexcept -> void
+    auto Framebuffer::clear(const float* color, const int32_t level) const noexcept -> void
     {
         functions::glClearFramebufferfv(_handle, constants::color, level, color);
     }

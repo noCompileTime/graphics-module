@@ -20,7 +20,7 @@ namespace opengl
         functions::glEnableVertexArrayAttrib (_handle, attribute.index);
     }
 
-    auto VertexArray::attach(const Buffer& buffer, const std::int32_t stride) const noexcept -> void
+    auto VertexArray::attach(const Buffer& buffer, const int32_t stride) const noexcept -> void
     {
         functions::glVertexArrayVertexBuffer(_handle, 0, buffer.handle(), 0, stride);
     }

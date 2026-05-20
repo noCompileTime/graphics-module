@@ -7,7 +7,7 @@ namespace opengl
     class Texture final : public Object
     {
     public:
-    explicit Texture(std::uint32_t target);
+        explicit Texture(uint32_t target);
 
         auto  create() noexcept -> void override;
         auto destroy() noexcept -> void override;
