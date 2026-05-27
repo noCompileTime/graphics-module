@@ -1,8 +1,5 @@
 #pragma once
 
-#include <cstddef> // TODO to be removed at some point
-#include <cstdint> // TODO to be removed at some point
-
 #include <windows.h>
 
 #include "functions/buffer.hpp"
