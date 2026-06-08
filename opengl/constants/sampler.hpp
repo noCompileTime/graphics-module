@@ -2,8 +2,8 @@
 
 namespace opengl::constants
 {
-    constexpr auto texture_wrap_s = 0x2802;
-    constexpr auto texture_wrap_t = 0x2803;
+    constexpr auto texture_wrap_s = 0x2802; // TODO just wrap_s
+    constexpr auto texture_wrap_t = 0x2803; // TODO just wrap_t
 
     constexpr auto  clamp_to_edge = 0x812F;
 

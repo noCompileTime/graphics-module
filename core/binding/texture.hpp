@@ -2,7 +2,7 @@
 
 namespace core::binding
 {
-    enum class texture : uint32_t
+    enum class texture : uint32_t // TODO named sampler?
     {
         albedo
     };
