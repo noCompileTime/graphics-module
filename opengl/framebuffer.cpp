@@ -1,5 +1,7 @@
 #include "framebuffer.hpp"
 
+#include <cassert>
+
 namespace opengl
 {
     auto Framebuffer::create() noexcept -> void
@@ -32,9 +34,9 @@ namespace opengl
         functions::glClearFramebufferfv(_handle, constants::depth, 0, &depth);
     }
 
-    auto Framebuffer::complete() const noexcept -> bool
+    auto Framebuffer::complete() const noexcept -> void
     {
-        return functions::glCheckFramebufferStatus(_handle, constants::framebuffer) == constants::framebuffer_complete;
+        assert(functions::glCheckFramebufferStatus(_handle, constants::framebuffer) == constants::framebuffer_complete);
     }
 
     auto Framebuffer::bind() const noexcept -> void

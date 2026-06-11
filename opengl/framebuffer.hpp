@@ -17,7 +17,7 @@ namespace opengl
         auto    clear(const float* color, int32_t level) const noexcept -> void;
         auto    clear(float depth)                       const noexcept -> void;
 
-        auto complete() const noexcept -> bool; // TODO make this a void? do the assert/warning checking inside?
+        auto complete() const noexcept -> void;
         auto     bind() const noexcept -> void;
     };
 }
