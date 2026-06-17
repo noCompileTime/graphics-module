@@ -1,5 +1,5 @@
 #pragma once
 
-#include <span>
-
 #include <print>
+
+#include <span>
