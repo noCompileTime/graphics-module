@@ -1,7 +1,6 @@
 #pragma once
 
 #include "buffer.hpp"
-#include "object.hpp"
 
 #include "vertex_attribute.hpp"
 
