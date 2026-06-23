@@ -11,6 +11,7 @@ namespace opengl
         auto   create() noexcept -> void override;
         auto  destroy() noexcept -> void override;
 
+        // TODO change it to shared_ptr, makes sense to have it this way
         auto   attach(const Texture& texture,     uint32_t attachment, int32_t level) const noexcept -> void;
         auto   attach(const Renderbuffer& buffer, uint32_t attachment)                const noexcept -> void;
 
