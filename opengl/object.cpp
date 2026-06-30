@@ -2,8 +2,8 @@
 
 namespace opengl
 {
-    Object::Object(const uint32_t info)
-        : _info { info }
+    Object::Object(const uint32_t meta)
+        : _meta { meta }
     {
     }
 
@@ -12,8 +12,8 @@ namespace opengl
         return _handle;
     }
 
-    auto Object::info() const noexcept -> uint32_t
+    auto Object::meta() const noexcept -> uint32_t
     {
-        return _info;
+        return _meta;
     }
 }

@@ -9,7 +9,7 @@ namespace opengl
 
     auto ShaderStage::create() noexcept -> void
     {
-        _handle = functions::glCreateShader(_info);
+        _handle = functions::glCreateShader(_meta);
     }
 
     auto ShaderStage::destroy() noexcept -> void

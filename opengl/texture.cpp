@@ -9,7 +9,7 @@ namespace opengl
 
     auto Texture::create() noexcept -> void
     {
-        functions::glCreateTextures(_info, 1, &_handle);
+        functions::glCreateTextures(_meta, 1, &_handle);
     }
 
     auto Texture::destroy() noexcept -> void
