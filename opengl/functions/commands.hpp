@@ -16,4 +16,7 @@ namespace opengl::functions
 
      using PFNGLVIEWPORTPROC = void(APIENTRY*)(int32_t x, int32_t y, int32_t width, int32_t height);
     inline PFNGLVIEWPORTPROC glViewport;
+
+     using PFNGLREADNPIXELSPROC = void(APIENTRY*)(int32_t x, int32_t y, int32_t width, int32_t height, uint32_t format, uint32_t type, int32_t size, void* data);
+    inline PFNGLREADNPIXELSPROC glReadnPixels;
 }
