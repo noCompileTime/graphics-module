@@ -32,7 +32,6 @@ namespace opengl
             functions::glDrawElements = reinterpret_cast<functions::PFNGLDRAWELEMENTSPROC>(GetProcAddress(instance, "glDrawElements"));
 
             functions::glViewport     = reinterpret_cast<functions::PFNGLVIEWPORTPROC>(GetProcAddress(instance, "glViewport"));
-            functions::glReadnPixels  = reinterpret_cast<functions::PFNGLREADNPIXELSPROC>(GetProcAddress(instance, "glReadnPixels"));
 
             /* pipeline */
 
@@ -61,6 +60,10 @@ namespace opengl
 
         functions::glDebugMessageCallback = reinterpret_cast<functions::PFNGLDEBUGMESSAGECALLBACKPROC>(wglGetProcAddress("glDebugMessageCallback"));
         functions::glDebugMessageControl  = reinterpret_cast<functions::PFNGLDEBUGMESSAGECONTROLPROC>(wglGetProcAddress("glDebugMessageControl"));
+
+        /* commands */
+
+        functions::glReadnPixels = reinterpret_cast<functions::PFNGLREADNPIXELSPROC>(wglGetProcAddress("glReadnPixels"));
     }
 
     auto Functions::shader_functions() noexcept -> void
@@ -95,6 +98,9 @@ namespace opengl
 
         functions::glBufferStorage   = reinterpret_cast<functions::PFNGLBUFFERSTORAGEPROC>(wglGetProcAddress("glNamedBufferStorage"));
         functions::glBufferSubData   = reinterpret_cast<functions::PFNGLBUFFERSUBDATAPROC>(wglGetProcAddress("glNamedBufferSubData"));
+
+        functions::glMapBuffer       = reinterpret_cast<functions::PFNGLMAPBUFFERPROC>(wglGetProcAddress("glMapNamedBuffer"));
+        functions::glUnmapBuffer     = reinterpret_cast<functions::PFNGLUNMAPBUFFERPROC>(wglGetProcAddress("glUnmapNamedBuffer"));
     }
 
     auto Functions::framebuffer_functions() noexcept -> void
