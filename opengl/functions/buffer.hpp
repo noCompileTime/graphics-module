@@ -22,4 +22,10 @@ namespace opengl::functions
 
      using PFNGLBUFFERSUBDATAPROC = void(APIENTRY*)(uint32_t buffer, size_t offset, size_t size, const void* data);
     inline PFNGLBUFFERSUBDATAPROC glBufferSubData;
+
+     using PFNGLMAPBUFFERPROC = void*(APIENTRY*)(uint32_t buffer, uint32_t access);
+    inline PFNGLMAPBUFFERPROC glMapBuffer;
+
+     using PFNGLUNMAPBUFFERPROC = uint8_t(APIENTRY*)(uint32_t buffer);
+    inline PFNGLUNMAPBUFFERPROC glUnmapBuffer;
 }
