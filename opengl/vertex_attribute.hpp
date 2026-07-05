@@ -6,7 +6,7 @@ namespace opengl
     {
         uint32_t index;
         uint32_t start;
-         int32_t  size;
+         int32_t  size; // TODO make this uint32_t and also in the gl function?
         uint32_t  type;
         uint32_t  slot;
     };

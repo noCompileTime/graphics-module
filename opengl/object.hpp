@@ -8,13 +8,23 @@ namespace opengl
                  Object() = default;
         virtual ~Object() = default;
 
-        explicit Object(uint32_t meta);
+        explicit Object(const uint32_t meta)
+            : _meta { meta }
+        {
+        }
+
+        [[nodiscard]] auto handle() const noexcept
+        {
+            return _handle;
+        }
+
+        [[nodiscard]] auto meta() const noexcept
+        {
+            return _meta;
+        }
 
         virtual auto  create() noexcept -> void = 0;
         virtual auto destroy() noexcept -> void = 0;
-
-        [[nodiscard]] auto handle() const noexcept -> uint32_t;
-        [[nodiscard]] auto   meta() const noexcept -> uint32_t;
 
     protected:
         uint32_t _handle { };
