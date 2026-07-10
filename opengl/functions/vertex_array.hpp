@@ -23,6 +23,6 @@ namespace opengl::functions
      using PFNGLENABLEVERTEXARRAYATTRIBPROC  = void(APIENTRY*)(uint32_t vao, uint32_t index);
     inline PFNGLENABLEVERTEXARRAYATTRIBPROC  glEnableVertexArrayAttrib;
 
-     using PFNGLBINDVERTEXARRAYPROC = void(APIENTRY*)(uint32_t array);
+     using PFNGLBINDVERTEXARRAYPROC = void(APIENTRY*)(uint32_t vao);
     inline PFNGLBINDVERTEXARRAYPROC glBindVertexArray;
 }
