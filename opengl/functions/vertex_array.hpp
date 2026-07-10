@@ -14,7 +14,7 @@ namespace opengl::functions
      using PFNGLVERTEXARRAYELEMENTBUFFERPROC = void(APIENTRY*)(uint32_t vao, uint32_t buffer);
     inline PFNGLVERTEXARRAYELEMENTBUFFERPROC glVertexArrayElementBuffer;
 
-     using PFNGLVERTEXARRAYATTRIBFORMATPROC = void(APIENTRY*)(uint32_t vao, uint32_t index, int32_t size, uint32_t type, uint8_t normalized, uint32_t offset);
+     using PFNGLVERTEXARRAYATTRIBFORMATPROC = void(APIENTRY*)(uint32_t vao, uint32_t index, uint32_t size, uint32_t type, uint8_t normalized, uint32_t offset);
     inline PFNGLVERTEXARRAYATTRIBFORMATPROC glVertexArrayAttribFormat;
 
      using PFNGLVERTEXARRAYATTRIBBINDINGPROC = void(APIENTRY*)(uint32_t vao, uint32_t index, uint32_t binding);
